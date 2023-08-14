@@ -1510,6 +1510,7 @@ SWEP.Attachments = {
     {
         PrintName = "Dovetail",
         Category = "eft_mount_dovetail",
+        RejectAttachments = { ["eft_mount_dovetail_b13"] = true, ["eft_mount_dovetail_b13v"] = true, },
         Bone = "mod_scope",
         Pos = Vector(0.05, 2, .5),
         Ang = Angle(0, -90, 0),
