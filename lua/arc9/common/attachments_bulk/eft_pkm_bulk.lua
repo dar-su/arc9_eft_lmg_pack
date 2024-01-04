@@ -173,8 +173,8 @@ ATT.VisualRecoilMult = 0.99
 ATT.RecoilMult = 0.99
 
 ATT.Bipod = true 
-ATT.RecoilMultBipod = 0.25
-ATT.VisualRecoilMultBipod = 0.25
+ATT.RecoilMultBipod = 0.75
+ATT.VisualRecoilMultBipod = 0.75
 ATT.SpreadAddBipod = -0.02
 
 
