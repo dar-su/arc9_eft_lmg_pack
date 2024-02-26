@@ -6,7 +6,7 @@ AddCSLuaFile()
 SWEP.Base = "arc9_eft_pkm"
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_at")
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_lmg")
 
 SWEP.PrintName = ARC9:GetPhrase("eft_weapon_pkp") or "PKP \"Pecheneg\""
 
