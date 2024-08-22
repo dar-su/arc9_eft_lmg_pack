@@ -162,20 +162,18 @@ ATT.CompactName = "PK bipod"
 ATT.Icon = Material("entities/eft_pkm_attachments/bipod.png", "mips smooth")
 ATT.Description = [[A standard-issue bipod for Kalashnikov Machine gun. Manufactured by V.A. Degtyarev Plant.
 
-Note: bipods not function in EFT! (yet)
-But here they are using non official arc9 magic. Do not place them if you want original suffering experience]]
+A bit improvised version of EFT bipods, does not need manual unfolding.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = 2
-ATT.CustomPros = { Ergonomics = "+2" }
-ATT.VisualRecoilMult = 0.99
-ATT.RecoilMult = 0.99
+ATT.EFTErgoAdd = -2
+ATT.CustomCons = { Ergonomics = "-2" }
 
 ATT.Bipod = true 
-ATT.RecoilMultBipod = 0.75
-ATT.VisualRecoilMultBipod = 0.75
-ATT.SpreadAddBipod = -0.02
+ATT.RecoilMultBipod = 0.33
+ATT.VisualRecoilMultBipod = 0.33
+ATT.HoldBreathTimeMultBipod = 30
+ATT.SwayMultBipod = 0.1
 
 
 ATT.Category = {"eft_bipod_pkm"}

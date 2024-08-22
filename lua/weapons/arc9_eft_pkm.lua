@@ -572,8 +572,10 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
                 swep:SetEFTArmedDryfire(false)
                 return anim .. "_armed"
             end
+        elseif anim == "enter_sights" and swep:GetBipod() 
+            then return "bipodfuckthis_enter"
         end
-        
+
         -- print("nomag:", nomag, "rand:", rand, "anim:", anim, "ending:", ending)
         return anim
     end
@@ -595,6 +597,10 @@ local neverlhik = {
     { t = 0, lhik = 0 },
     { t = 1, lhik = 0 },
 } 
+
+local bipodpath = "weapons/darsu_eft/bipod/"
+SWEP.EnterBipodSound = false 
+SWEP.ExitBipodSound = { bipodpath .. "bipod_rpd_fold_1.ogg", bipodpath .. "bipod_rpd_fold_2.ogg", bipodpath .. "bipod_rpd_fold_3.ogg" }
 
 SWEP.Animations = {
         ["idle"] = {
@@ -1425,6 +1431,25 @@ SWEP.Animations = {
                 { t = 1, lhik = 1 },
             },
         },
+
+        ["bipodfuckthis_enter"] = {
+            Source = "ironsight_in",
+            NoStatAffectors = true,
+            FireASAP = true,
+            MinProgress = 1,
+            EventTable = {
+                { s =  path .. "pk_gun_flip_2.ogg", t = 0.05 },
+                { s =  path .. "m203_hand_out_tube.ogg", t = 0.21 },
+                { s = { bipodpath .. "bipod_rpd_unfold_1.ogg", bipodpath .. "bipod_rpd_unfold_2.ogg", bipodpath .. "bipod_rpd_unfold_3.ogg" }, t = 0.2 },
+                { s = { bipodpath .. "bipod_stand_on_1.ogg", bipodpath .. "bipod_stand_on_2.ogg", bipodpath .. "bipod_stand_on_3.ogg", bipodpath .. "bipod_stand_on_4.ogg", bipodpath .. "bipod_stand_on_5.ogg" }, t = 0.3 },
+            },
+            IKTimeLine = {
+                { t = 0, lhik = 1 },
+                { t = 0.1, lhik = 1 },
+                { t = 0.36, lhik = 0 },
+                { t = 1, lhik = 0 },
+            },
+        },
     }
 
 ------------------------- [[[           Attachments            ]]] -------------------------
@@ -1668,14 +1693,11 @@ end
 -- fake bipod
 SWEP.Hook_ModifyBodygroups = function(swep, data)
     if data.elements["eft_pkm_bipod"] and swep:GetBipod() then
-        if swep:GetEnterBipodTime() + 0.2 < CurTime() then
+        if swep:GetEnterBipodTime() + 0.1 < CurTime() then
             data.model:SetBodygroup(5, 2)
         end
     end
 end
-
-SWEP.EnterBipodSound = path .. "pk_sight_mount_out.ogg" 
-SWEP.ExitBipodSound = path .. "pk_sight_mount_in.ogg"
 
 -- ewww
 DEFINE_BASECLASS(SWEP.Base)
