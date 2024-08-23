@@ -543,7 +543,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
             local timrr = swep:GetAnimationEntry(animla).MagSwapTime
 
             timer.Simple(timrr, function()
-                if IsValid(swep) and IsValid(swep:GetOwner()) then
+                if IsValid(swep) and IsValid(swep:GetOwner()) and swep:GetReloading() then
                     swep:SetEFTShootedRounds(0)
                 end
             end)
@@ -1703,8 +1703,8 @@ end
 DEFINE_BASECLASS(SWEP.Base)
 function SWEP:SetupDataTables(...)
     BaseClass.SetupDataTables(self, ...)
-    self:NetworkVar("Int", 11, "EFTShootedRounds")
-    self:NetworkVar("Bool", 27, "EFTArmedDryfire")
+    self:NetworkVar("Int", "EFTShootedRounds")
+    self:NetworkVar("Bool", "EFTArmedDryfire")
     self:SetEFTShootedRounds(0)
     self:SetEFTArmedDryfire(true)
 end
