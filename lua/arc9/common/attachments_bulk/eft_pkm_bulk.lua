@@ -302,6 +302,8 @@ ATT.CompactName = "PK"
 ATT.Icon = Material("entities/eft_pkm_attachments/pg.png", "mips smooth")
 ATT.Description = [[A standard-issue pistol grip for Kalashnikov Machine gun. Manufactured by V.A. Degtyarev Plant.]]
 
+ATT.HasGrip = true
+
 ATT.EFTErgoAdd = 6
 ATT.CustomPros = { Ergonomics = "+6" }
 
@@ -320,6 +322,8 @@ ATT.PrintName = "PK pistol grip (Black)"
 ATT.CompactName = "PK (B)"
 ATT.Icon = Material("entities/eft_pkm_attachments/pgb.png", "mips smooth")
 ATT.Description = [[A standard-issue black pistol grip for Kalashnikov Machine gun. Manufactured by V.A. Degtyarev Plant.]]
+
+ATT.HasGrip = true
 
 ATT.EFTErgoAdd = 7
 ATT.CustomPros = { Ergonomics = "+7" }
