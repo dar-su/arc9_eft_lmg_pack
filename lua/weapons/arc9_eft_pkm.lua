@@ -67,6 +67,8 @@ SWEP.BarrelLength = 55
 SWEP.Ammo = "ar2"
 SWEP.Firemodes = { { Mode = -1} }
 
+SWEP.ReloadInSights = false 
+
 SWEP.Slot = 3
 
 ------------------------- |||           Recoil            ||| -------------------------
