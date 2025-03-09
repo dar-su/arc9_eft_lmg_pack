@@ -1420,6 +1420,12 @@ SWEP.DropMagazineVelocityHook = function(swep, old)
     return funnyvec2
 end
 
+SWEP.DynamicConditions = {
+    ["Recoil"] = true,
+    ["DropMagazineModel"] = true,
+    ["DropMagazineVelocity"] = true,
+}
+
 -- fake bipod
 SWEP.Hook_ModifyBodygroups = function(swep, data)
     if data.elements["eft_pkm_bipod"] and swep:GetBipod() then
