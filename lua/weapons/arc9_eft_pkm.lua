@@ -5,18 +5,18 @@ SWEP.Spawnable = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-SWEP.PrintName = ARC9:GetPhrase("eft_weapon_pkm") or "PKM"
-SWEP.Description = [[PKM (Pulemyot Kalashnikova Modernizirovanny - "Kalashnikov's Machine Gun Modernized") is a modernized version of Kalashnikov PK machine gun, operating with 7.62x54R ammunition. The PKM proved to be a powerful, simple, reliable and effective weapon. It was in demand for many decades, starting from the late 60s of the last century and up to the present time. Manufactured by V.A. Degtyarev Plant.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_pkm")
+SWEP.Description = "eft_weapon_pkm_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_lmg")
+SWEP.Class = "eft_class_weapon_lmg"
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_lmg")
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "Degtyaryov Plant",
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "7.62x54mmR",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_gas"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_ussr"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1994"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_degtyaryov",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_762x54",
+    ["eft_trivia_act3"] = "eft_trivia_act_gas",
+    ["eft_trivia_country4"] = "eft_trivia_country_ussr",
+    ["eft_trivia_year5"] = "1994"
 }
 
 SWEP.StandardPresets = {
