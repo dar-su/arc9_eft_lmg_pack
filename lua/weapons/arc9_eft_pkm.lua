@@ -333,7 +333,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     end
 
     -- print("nomag:", nomag, "rand:", rand, "anim:", anim, "ending:", ending)
-    return anim
+    -- return anim
 end
 
 SWEP.ReloadHideBoneTables = {
