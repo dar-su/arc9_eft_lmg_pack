@@ -45,9 +45,10 @@ SWEP.IronSights = {
 }
 
 SWEP.ActivePos = Vector(-0.7, -4, -0.37)
-SWEP.CustomizePos = Vector(21, 30, 6.5)
-SWEP.CustomizeSnapshotFOV = 94
-SWEP.CustomizeRotateAnchor = Vector(20, -4.25, -6)
+SWEP.CustomizePos = Vector(20, 48, 4.3)
+SWEP.CustomizeSnapshotFOV = 55
+SWEP.CustomizeRotateAnchor = Vector(20, -4.28, -5.23)
+SWEP.CustomizeSnapshotPos = Vector(0, 25, 0)
 
 if GetConVar("arc9_eft_nontpik_mode"):GetBool() then
     SWEP.HoldType = "shotgun"
