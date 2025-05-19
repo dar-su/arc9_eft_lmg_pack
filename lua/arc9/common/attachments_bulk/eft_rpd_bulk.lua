@@ -25,14 +25,14 @@ ATT.Category = {"eft_rpd_barrel"}
 
 ATT.Attachments = {
     {
-        PrintName = "Muzzle",
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
         Category = "eft_muzzle_rpd",
         Pos = Vector(0, 21, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
     },
     {
-        PrintName = "Bipod",
+        PrintName = ARC9:GetPhrase("eft_cat_bipod"),
         Category = "eft_bipod_rpd",
         Pos = Vector(0, 18, 1),
         Ang = Angle(0, 0, 0),
@@ -65,7 +65,7 @@ ATT.Category = {"eft_rpd_barrel"}
 
 ATT.Attachments = {
     {
-        PrintName = "Muzzle",
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
         Category = "eft_muzzle_rpd",
         Pos = Vector(0, 14, 0),
         Ang = Angle(0, 0, 0),
@@ -183,7 +183,7 @@ ATT.Category = {"eft_stock_rpd"}
 
 ATT.Attachments = {
     {
-        PrintName = "Pistol Grip",
+        PrintName = ARC9:GetPhrase("eft_cat_pgrip"),
         Category = "eft_pg_rpd",
         Pos = Vector(0, 0, 3),
         Ang = Angle(0, -90, 0),
