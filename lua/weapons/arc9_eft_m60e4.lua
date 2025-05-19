@@ -422,7 +422,6 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         IKTimeLine = alwayslhik,
-        -- Time = 1000, -- REMOVEEEEEEEEEEEEEEE THIS!!!!!!!!!!!!!!!!!!!!!!!!!!
     },
 
     ["ready"] = {
