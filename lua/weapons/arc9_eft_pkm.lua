@@ -246,6 +246,7 @@ SWEP.BulletBones = {
 }
 
 -- SWEP.SuppressEmptySuffix = true
+SWEP.EFT_HasTacReloads = true
 
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
@@ -278,7 +279,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         if rand == 2 and !nomag then -- mag
             ending = "_mag_" .. ending
             
-            if ARC9EFTBASE and SERVER then
+            if SERVER then
                 net.Start("arc9eftmagcheck")
                 net.WriteBool(false) -- accurate or not based on mag type
                 net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
@@ -290,26 +291,36 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         end
         
         return anim .. ending
-    elseif anim == "reload" or anim == "reload_empty" or anim == "reload_sights" or anim == "reload_empty_sights" then
+    elseif (anim == "reload" or anim == "reload_empty" or anim == "reload_sights" or anim == "reload_empty_sights") then
         if anim == "reload_sights" then anim = "reload" end
         if anim == "reload_empty_sights" then anim = "reload_empty" end
         if anim == "reload" and empty then anim = "reload_empty" end -- ??? 
         if nomag then return "reload_single" .. (itspkp and "_m" or "") end
 
         local animla = (anim .. ending .. (itspkp and "_m" or "") .. ((swep:GetSightAmount() > 0.5 or swep:GetBipod()) and "_sights" or ""))
-        local timrr = swep:GetAnimationEntry(animla).MagSwapTime
 
-        timer.Simple(timrr, function()
-            if IsValid(swep) and IsValid(swep:GetOwner()) and swep:GetReloading() then
-                swep:SetEFTShootedRounds(0)
-            end
-        end)
+        if swep.EFT_StartedTacReload then
+            if SERVER then timer.Simple(0.3, function() if IsValid(swep) then swep:SetClip1(1) end end) end
+            animla = animla .. "_tactical"
+        end
+
+        if SERVER then
+            local timrr = swep:GetAnimationEntry(animla).MagSwapTime
+            
+            timer.Remove("woof" .. swep:EntIndex())
+            timer.Create("woof" .. swep:EntIndex(), timrr, 1, function()
+                if IsValid(swep) and IsValid(swep:GetOwner()) and swep:GetReloading() then
+                    swep:SetEFTShootedRounds(0)
+                end
+            end)
+        end
+        
         return animla
     elseif anim == "fix" then
         rand = math.Truncate(util.SharedRandom("hi", 1, 4.99))
         -- rand = 2
 
-        if ARC9EFTBASE and SERVER then
+        if SERVER then
             timer.Simple(1.5, function()
                 if IsValid(swep) and IsValid(swep:GetOwner()) then
                     net.Start("arc9eftjam")
@@ -640,6 +651,35 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_2.ogg", t = 8.23 },
         },
     },
+    ["reload0_tactical"] = {
+        Source = "reloadt",
+        MinProgress = 0.93,
+        MagSwapTime = 4.3- 4/25,
+        FireASAP = true,
+        IKTimeLine = alwayslhik,
+        DropMagAt = 3.26 - 4/25,
+        EventTable = {
+            { s = path .. "pk_gun_flip_2.ogg", t = 0.22 - 4/25 },
+            { s = path .. "pk_cover_open.ogg", t = 1.0 - 4/25 },
+            { s = path .. "pk_mag_release.ogg", t = 2.09 - 4/25 },
+            { s = path .. "pk_mag_flip_4.ogg", t = 2.25  - 4/25},
+            { s = path .. "pk_mag_out.ogg", t = 2.5 - 4/25 },
+            { s = path .. "pk_gun_flip_4.ogg", t = 2.85 - 4/25 },
+            { s = path .. "pk_gun_flip_1.ogg", t = 3.22 - 4/25 },
+            { s = pouchout, t = 3.56 - 4/25 },
+            { s = path .. "pk_gun_flip_3.ogg", t = 4.1 - 4/25 },
+            { s = path .. "pk_mag_flip_2.ogg", t = 4.54  - 4/25},
+            { s = path .. "pk_mag_in.ogg", t = 4.73  - 4/25},
+            { s = path .. "pk_belt_in.ogg", t = 5.55 - 4/25 },
+            { s = path .. "pk_gun_flip_1.ogg", t = 6.61  - 4/25},
+            { s = path .. "pk_cover_close.ogg", t = 6.58  - 4/25},
+            { s = path .. "pk_gun_flip_2.ogg", t = 7  - 4/25},
+            
+            {hide = 0, t = 0},
+            {hide = 1, t = 3.26 - 4/25},
+            {hide = 0, t = 3.5+0.2 - 4/25}
+        },
+    },
     ["reload0_m"] = {
         Source = "reload_m",
         MinProgress = 0.97,
@@ -673,6 +713,45 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_2.ogg", t = 9.95 },
         },
     },
+    ["reload0_m_tactical"] = {
+        Source = "reload_mt",
+        MinProgress = 0.97,
+        MagSwapTime = 5- 4/25,
+        FireASAP = true,
+        IKTimeLine = alwayslhik,
+        DropMagAt = 3.98 - 4/25,
+        EventTable = {
+            { s = path .. "pk_gun_flip_2.ogg", t = 0.22 - 4/25 },
+            { s = path .. "pk_sight_button_in.ogg", t = 1.02 - 4/25 },
+            { s = path .. "pk_sight_mount_out.ogg", t = 1.12 - 4/25 },
+            { s = path .. "pk_sight_button_out.ogg", t = 1.33 - 4/25 },
+
+            { s = path .. "pk_gun_flip_2.ogg", t = 0.22+0.7 - 4/25 },
+            { s = path .. "pk_cover_open.ogg", t = 1.0+0.7 - 4/25 },
+            { s = path .. "pk_mag_release.ogg", t = 2.09+0.7 - 4/25 },
+            { s = path .. "pk_mag_flip_4.ogg", t = 2.25+0.7  - 4/25},
+            { s = path .. "pk_mag_out.ogg", t = 2.5+0.65 - 4/25 },
+            { s = path .. "pk_gun_flip_4.ogg", t = 2.85+0.7 - 4/25 },
+            { s = path .. "pk_gun_flip_1.ogg", t = 3.22+0.7 - 4/25 },
+            { s = pouchout, t = 3.56+0.7  - 4/25},
+            { s = path .. "pk_gun_flip_3.ogg", t = 4.1+0.7  - 4/25},
+            { s = path .. "pk_mag_flip_2.ogg", t = 4.54+0.7  - 4/25},
+            { s = path .. "pk_mag_in.ogg", t = 4.73+0.7 - 4/25 },
+            { s = path .. "pk_belt_in.ogg", t = 5.55+0.7 - 4/25 },
+            { s = path .. "pk_gun_flip_1.ogg", t = 6.61+0.7 - 4/25 },
+            { s = path .. "pk_cover_close.ogg", t = 6.58+0.7 - 4/25 },
+            
+            { s = path .. "pk_gun_flip_5.ogg", t = 8.84 - 4/25 },
+            { s = path .. "pk_sight_button_in.ogg", t = 8.47 - 4/25 },
+            { s = path .. "pk_sight_mount_in.ogg", t = 8.87 - 4/25 },
+            { s = path .. "pk_sight_button_out.ogg", t = 9.15 - 4/25 },
+            { s = path .. "pk_gun_flip_4.ogg", t = 9.35 - 4/25 },
+            
+            {hide = 0, t = 0},
+            {hide = 1, t = 3.98 - 4/25},
+            {hide = 0, t = 3.5+0.7+0.2 - 4/25}
+        },
+    },
     ["reload0_sights"] = {
         Source = "reload_sights",
         MinProgress = 0.85,
@@ -699,10 +778,41 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_2.ogg", t = 8.23+0.8 },
         },
     },
+    ["reload0_sights_tactical"] = {
+        Source = "reload_sightst",
+        MinProgress = 0.85,
+        MagSwapTime = 4.3+0.8- 4/25,
+        FireASAP = true,
+        DropMagAt = 3.26+0.63 - 4/25,
+        EventTable = {
+            { s = path .. "pk_gun_flip_1.ogg", t = 0.1 - 4/25 },
+            { s = path .. "m203_hand_final_movement.ogg", t = 0.48 - 4/25 },
+            { s = path .. "pk_gun_flip_2.ogg", t = 0. - 4/258 },
+            
+            { s = path .. "pk_cover_open.ogg", t = 1.0+0.63 - 4/25 },
+            { s = path .. "pk_mag_release.ogg", t = 2.09+0.63 - 4/25 },
+            { s = path .. "pk_mag_flip_4.ogg", t = 2.25+0.63 - 4/25 },
+            { s = path .. "pk_mag_out.ogg", t = 2.5+0.63 - 4/25 },
+            { s = path .. "pk_gun_flip_4.ogg", t = 2.85+0.63 - 4/25 },
+            { s = path .. "pk_gun_flip_1.ogg", t = 3.22+0.63 - 4/25 },
+            { s = pouchout, t = 3.56+0.63 - 4/25 },
+            { s = path .. "pk_gun_flip_3.ogg", t = 4.1+0.63 - 4/25 },
+            { s = path .. "pk_mag_flip_2.ogg", t = 4.54+0.63 - 4/25 },
+            { s = path .. "pk_mag_in.ogg", t = 4.73+0.63 - 4/25 },
+            { s = path .. "pk_belt_in.ogg", t = 5.55+0.63 - 4/25 },
+            { s = path .. "pk_gun_flip_1.ogg", t = 6.61+0.63 - 4/25 },
+            { s = path .. "pk_cover_close.ogg", t = 6.58+0.63 - 4/25 },
+            { s = path .. "pk_gun_flip_4.ogg", t = 7.45+0.63 - 4/25 },
+            
+            {hide = 0, t = 0},
+            {hide = 1, t = 3.26+0.63 - 4/25},
+            {hide = 0, t = 3.5+0.63+0.2 - 4/25}
+        },
+    },
     ["reload0_m_sights"] = {
         Source = "reload_m_sights",
         MinProgress = 0.85,
-        MagSwapTime = 3,
+        MagSwapTime = 4.14+0.9+0.85,
         FireASAP = true,
         EventTable = {
             { s = path .. "pk_gun_flip_1.ogg", t = 0.1 },
@@ -732,6 +842,48 @@ SWEP.Animations = {
             { s = path .. "pk_sight_mount_in.ogg", t = 9.42+0.8 },
             { s = path .. "pk_sight_button_out.ogg", t = 9.71+0.8 },
             { s = path .. "pk_gun_flip_2.ogg", t = 9.95+0.8 },
+        },
+    },
+    ["reload0_m_sights_tactical"] = {
+        Source = "reload_m_sightst",
+        MinProgress = 0.85,
+        MagSwapTime = 4.14+0.9+0.85- 4/25,
+        FireASAP = true,
+        DropMagAt = 3.98+0.5 - 4/25,
+        EventTable = {
+            { s = path .. "pk_gun_flip_1.ogg", t = 0.1 - 4/25 },
+            { s = path .. "m203_hand_final_movement.ogg", t = 0.48 - 4/25 },
+            { s = path .. "pk_gun_flip_2.ogg", t = 0.8 - 4/25 },
+
+            { s = path .. "pk_sight_button_in.ogg", t = 1.02+0.63 - 4/25 },
+            { s = path .. "pk_sight_mount_out.ogg", t = 1.12+0.63 - 4/25 },
+            { s = path .. "pk_sight_button_out.ogg", t = 1.33+0.63 - 4/25 },
+
+            { s = path .. "pk_gun_flip_2.ogg", t = 0.22+0.7+0.63 - 4/25 },
+            { s = path .. "pk_cover_open.ogg", t = 1.0+0.7+0.63 - 4/25 },
+            { s = path .. "pk_mag_release.ogg", t = 2.09+0.7+0.63 - 4/25 },
+            { s = path .. "pk_mag_flip_4.ogg", t = 2.25+0.7+0.63 - 4/25 },
+            { s = path .. "pk_mag_out.ogg", t = 2.5+0.65+0.63 - 4/25 },
+            { s = path .. "pk_gun_flip_4.ogg", t = 2.85+0.7+0.63 - 4/25 },
+            { s = path .. "pk_gun_flip_1.ogg", t = 3.22+0.7+0.63 - 4/25 },
+            { s = pouchout, t = 3.56+0.7+0.63 - 4/25 },
+            { s = path .. "pk_gun_flip_3.ogg", t = 4.1+0.7+0.63 - 4/25 },
+            { s = path .. "pk_mag_flip_2.ogg", t = 4.54+0.7+0.63 - 4/25 },
+            { s = path .. "pk_mag_in.ogg", t = 4.73+0.7+0.63 - 4/25 },
+            { s = path .. "pk_belt_in.ogg", t = 5.55+0.7+0.63 - 4/25 },
+            { s = path .. "pk_gun_flip_1.ogg", t = 6.61+0.7+0.63 - 4/25 },
+            { s = path .. "pk_cover_close.ogg", t = 6.58+0.7+0.63 - 4/25 },
+            
+            { s = path .. "pk_gun_flip_5.ogg", t = 8.84+0.63 - 4/25 },
+            { s = path .. "pk_sight_button_in.ogg", t = 8.47+0.63 - 4/25 },
+            { s = path .. "pk_sight_mount_in.ogg", t = 8.87+0.63 - 4/25 },
+            { s = path .. "pk_sight_button_out.ogg", t = 9.15+0.63 - 4/25 },
+            { s = path .. "pk_gun_flip_4.ogg", t = 9.35+0.63 - 4/25 },
+
+            
+            {hide = 0, t = 0},
+            {hide = 1, t = 3.98+0.5 - 4/25},
+            {hide = 0, t = 3.5+0.7+0.5+0.2 - 4/25}
         },
     },
 

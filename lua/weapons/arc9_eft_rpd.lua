@@ -200,9 +200,9 @@ SWEP.HookP_DescriptionChange = function(self, desc)
     local elements = self:GetElements()
 
     if elements["eft_rpd_n"] then
-        return [[The Degtyarev hand-held machine gun chambered in 7.62x39 caliber. This machine gun was adopted by the Soviet Army and was used as a means of reinforcing infantry squads and platoons from the late forties to the early sixties. The RPD is elegantly designed, resulting in a compact, reliable and quite powerful fire support weapon. The RPDN variant is equipped with a hinged dovetail mount for installing optics. Manufactured by V.A. Degtyarev Plant.]]
+        return ARC9:GetPhrase("eft_weapon_rpdn_desc")
     else
-        return [[The Degtyarev hand-held machine gun chambered in 7.62x39 caliber. This machine gun was adopted by the Soviet Army and was used as a means of reinforcing infantry squads and platoons from the late forties to the early sixties. The RPD is elegantly designed, resulting in a compact, reliable and quite powerful fire support weapon. Manufactured by V.A. Degtyarev Plant.]]
+        return ARC9:GetPhrase("eft_weapon_rpd_desc")
     end
 end
 
@@ -267,6 +267,7 @@ SWEP.BulletBones = {
 }
 
 -- SWEP.SuppressEmptySuffix = true
+SWEP.EFT_HasTacReloads = true
 
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
@@ -299,7 +300,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         if rand == 2 and !nomag then -- mag
             ending = "_mag_" .. ending
             
-            if ARC9EFTBASE and SERVER then
+            if SERVER then
                 net.Start("arc9eftmagcheck")
                 net.WriteBool(false) -- accurate or not based on mag type
                 net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
@@ -320,12 +321,18 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
                 swep:SetEFTShootedRounds(0)
             end
         end)
+        
+        if swep.EFT_StartedTacReload then
+            if SERVER then timer.Simple(0.3, function() if IsValid(swep) then swep:SetClip1(0) end end) end
+            animla = animla .. "_tactical"
+        end
+
         return animla
     -- elseif anim == "fix" then
     --     rand = math.Truncate(util.SharedRandom("hi", 1, 4.99))
     --     -- rand = 2
 
-    --     if ARC9EFTBASE and SERVER then
+    --     if SERVER then
     --         timer.Simple(1.5, function()
     --             if IsValid(swep) and IsValid(swep:GetOwner()) then
     --                 net.Start("arc9eftjam")
@@ -607,6 +614,30 @@ SWEP.Animations = {
             { s = randspin, t = 8.45 },
         },
     },
+    ["reload0_tactical"] = {
+        Source = "reloadt",
+        MinProgress = 0.93,
+        MagSwapTime = 5,
+        FireASAP = true,
+        IKTimeLine = alwayslhik,
+        DropMagAt = 4.25 - 1.8 - 4/25,
+        EventTable = {
+            { s = randspin, t = 0 },
+            { s = path .. "rpd_dust_open.ogg", t = 2.45 - 1.8 - 4/25 },
+            { s = path .. "rpd_mag_out.ogg", t = 3.37 - 1.8- 4/25 },
+            { s = path .. "pk_belt_out.ogg", t = 3.8 - 1.8- 4/25 },
+            { s = pouchout, t = 4.8 - 1.8- 4/25 },
+            { s = randspin, t = 5.01 - 1.8- 4/25 },
+            { s = path .. "rpd_mag_in.ogg", t = 5.96- 1.8 - 4/25 },
+            { s = path .. "pk_belt_roll.ogg", t = 7 - 1.8- 4/25 },
+            { s = path .. "rpd_dust_close2.ogg", t = 8.15- 1.8 - 4/25 },
+            { s = randspin, t = 9.18 - 1.8- 4/25 },
+            
+            {hide = 0, t = 0},
+            {hide = 1, t = 4.25 - 1.8 - 4/25},
+            {hide = 0, t = 4.8 - 1.8 - 4/25}
+        },
+    },
     ["reload0_n"] = {
         Source = "reload_n",
         MinProgress = 0.97,
@@ -640,6 +671,40 @@ SWEP.Animations = {
             { s = randspin, t = 10.57 },
         },
     },
+    ["reload0_n_tactical"] = {
+        Source = "reload_nt",
+        MinProgress = 0.97,
+        MagSwapTime = 5.2,
+        FireASAP = true,
+        IKTimeLine = alwayslhik,
+        DropMagAt = 5.35 - 1.8 - 4/25,
+        EventTable = {
+            { s = path .. "rpd_sight_button_in.ogg", t = 2.44- 1.8 - 4/25 },
+            { s = path .. "rpd_sight_mount_out.ogg", t = 2.6- 1.8 - 4/25 },
+            { s = path .. "rpd_sight_button_out.ogg", t = 2.75- 1.8 - 4/25 },
+            { s = path .. "pk_gun_flip_5.ogg", t = 3- 1.8 - 4/25 },
+
+            { s = path .. "rpd_dust_open.ogg", t = 3.4- 1.8 - 4/25 },
+            { s = path .. "rpd_mag_out.ogg", t = 4.31- 1.8 - 4/25 },
+            { s = path .. "pk_belt_out.ogg", t = 4.75- 1.8 - 4/25 },
+            { s = pouchout, t = 5.74- 1.8 - 4/25 },
+            { s = randspin, t = 5.99- 1.8 - 4/25 },
+            { s = path .. "rpd_mag_in.ogg", t = 6.95- 1.8 - 4/25 },
+            { s = path .. "pk_belt_roll.ogg", t = 7.93- 1.8 - 4/25 },
+            { s = path .. "rpd_dust_close2.ogg", t = 9.1- 1.8 - 4/25 },
+            
+            { s = path .. "rpd_gun_flip_5.ogg", t = 9.71- 1.8 - 4/25 },
+            { s = path .. "rpd_sight_mount_in.ogg", t = 10- 1.8 - 4/25 },
+            { s = path .. "rpd_sight_button_in.ogg", t = 10.41- 1.8 - 4/25 },
+            { s = path .. "rpd_sight_button_out.ogg", t = 10.5- 1.8 - 4/25 },
+            { s = randspin, t = 10.98- 1.8 - 4/25 },
+            
+            {hide = 0, t = 0},
+            {hide = 1, t = 5.35 - 1.8 - 4/25},
+            {hide = 0, t = 5.7 - 1.8 - 4/25}
+        },
+    },
+    
 
     ["reload_empty0"] = {
         Source = "reload_empty", 
@@ -1035,7 +1100,7 @@ SWEP.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/belt_rpd_dropped.md
 
 SWEP.DropMagazineModelHook = function(swep, old)
     if swep:GetReloading() then
-        return "models/weapons/arc9/darsu_eft/mods/mag_rpd_dropped.mdl"
+        return "models/weapons/arc9/darsu_eft/mods/mag_rpd_dropped2.mdl"
     end
     return "models/weapons/arc9/darsu_eft/mods/belt_rpd_dropped.mdl"
 end

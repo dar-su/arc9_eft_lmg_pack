@@ -265,6 +265,7 @@ SWEP.BulletBones = {
 }
 
 -- SWEP.SuppressEmptySuffix = true
+SWEP.EFT_HasTacReloads = true
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
@@ -294,7 +295,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         if rand == 2 and !nomag then -- mag
             ending = "_mag_" .. ending
             
-            if ARC9EFTBASE and SERVER then
+            if SERVER then
                 net.Start("arc9eftmagcheck")
                 net.WriteBool(false) -- accurate or not based on mag type
                 net.WriteUInt(math.min(swep:Clip1(), swep:GetCapacity()), 9)
@@ -315,12 +316,18 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         --         swep:SetEFTShootedRounds(0)
         --     end
         -- end)
+        
+        if swep.EFT_StartedTacReload then
+            if SERVER then timer.Simple(0.3, function() if IsValid(swep) then swep:SetClip1(1) end end) end
+            return "reload_tactical" .. ending
+        end
+
         return animla
     -- elseif anim == "fix" then
     --     rand = math.Truncate(util.SharedRandom("hi", 1, 4.99))
     --     -- rand = 2
 
-    --     if ARC9EFTBASE and SERVER then
+    --     if SERVER then
     --         timer.Simple(1.5, function()
     --             if IsValid(swep) and IsValid(swep:GetOwner()) then
     --                 net.Start("arc9eftjam")
@@ -511,6 +518,37 @@ SWEP.Animations = {
             { s = beltt, t = 5.1 },
             { s = path .. "m60_close_cover.ogg", t = 7.0 - 0.2 },
             { s =  path .. "m60_gunflip_3.ogg", t = 7.7 },
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.07, lhik = 0 },
+            { t = 0.87, lhik = 0 },
+            { t = 0.92, lhik = 1 },
+            { t = 1, lhik = 1 },
+        },
+    },
+    ["reload_tactical0"] = {
+        Source = "reloadt",
+        MinProgress = 0.93,
+        MagSwapTime = 3.25,
+        FireASAP = true,
+        -- IKTimeLine = alwayslhik,
+        DropMagAt = 2.6- 4/25,
+        EventTable = {
+            { s =  path .. "m60_gunflip_1.ogg", t = 0.1 - 4/25 },
+            { s = path .. "m60_dust_open.ogg", t = 0.86 - 0.3 - 4/25 },
+            { s = path .. "m60_mag_out_fast.ogg", t = 1.48 - 4/25 },
+            { s = path .. "m60_gunflip_2.ogg", t = 2.3 - 4/25 },
+            { s = pouchout, t = 2.85 - 4/25 },
+            { s = randspin, t = 2.93 - 4/25 },
+            { s = path .. "m60_mag_in.ogg", t = 3.58 - 4/25 },
+            { s = path .. "m60_belt_setup.ogg", t = 4.54 - 0.38 - 4/25 },
+            { s = beltt, t = 4.5 - 4/25 },
+            { s = path .. "m60_close_cover.ogg", t = 6.39 - 0.2 - 4/25 },
+            { s = randspin, t = 7 - 4/25 },
+            {hide = 0, t = 0},
+            {hide = 1, t = 2.6- 4/25},
+            {hide = 0, t = 2.9- 4/25}
         },
         IKTimeLine = {
             { t = 0, lhik = 1 },
