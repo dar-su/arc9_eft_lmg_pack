@@ -210,6 +210,7 @@ end
 
 local path = "weapons/darsu_eft/rpd/"
 local path2 = "weapons/darsu_eft/rpd/fire/"
+local path4 = "weapons/darsu_eft/pkm/"
 
 SWEP.ShootSound = { path2 .. "rpd_outdoor_close_loop1.ogg", path2 .. "rpd_outdoor_close_loop2.ogg", path2 .. "rpd_outdoor_close_loop3.ogg", path2 .. "rpd_outdoor_close_loop4.ogg" }
 SWEP.LayerSound = path2 .. "rpd_outdoor_close_loopt.ogg"
@@ -494,7 +495,7 @@ local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.ogg","arc9_eft_sha
 local pouchin = {"arc9_eft_shared/generic_mag_pouch_in1.ogg","arc9_eft_shared/generic_mag_pouch_in2.ogg","arc9_eft_shared/generic_mag_pouch_in3.ogg","arc9_eft_shared/generic_mag_pouch_in4.ogg","arc9_eft_shared/generic_mag_pouch_in5.ogg","arc9_eft_shared/generic_mag_pouch_in6.ogg","arc9_eft_shared/generic_mag_pouch_in7.ogg"}
 local pouchout = {"arc9_eft_shared/generic_mag_pouch_out1.ogg","arc9_eft_shared/generic_mag_pouch_out2.ogg","arc9_eft_shared/generic_mag_pouch_out3.ogg","arc9_eft_shared/generic_mag_pouch_out4.ogg","arc9_eft_shared/generic_mag_pouch_out5.ogg","arc9_eft_shared/generic_mag_pouch_out6.ogg","arc9_eft_shared/generic_mag_pouch_out7.ogg"}
 
-local beltt = {path .. "pk_belt_1.ogg",path .. "pk_belt_2.ogg",path .. "pk_belt_3.ogg",path .. "pk_belt_4.ogg",path .. "pk_belt_5.ogg",path .. "pk_belt_6.ogg",path .. "pk_belt_7.ogg",path .. "pk_belt_8.ogg",path .. "pk_belt_9.ogg" }
+local beltt = {path4 .. "pk_belt_1.ogg",path4 .. "pk_belt_2.ogg",path4 .. "pk_belt_3.ogg",path4 .. "pk_belt_4.ogg",path4 .. "pk_belt_5.ogg",path4 .. "pk_belt_6.ogg",path4 .. "pk_belt_7.ogg",path4 .. "pk_belt_8.ogg",path4 .. "pk_belt_9.ogg" }
 
 local alwayslhik = {
     { t = 0, lhik = 1 },
@@ -602,14 +603,14 @@ SWEP.Animations = {
             { s = randspin, t = 0.05 },
             { s = path .. "rpd_dust_open.ogg", t = 0.55 },
             { s = randspin, t = 1.49 },
-            { s = path .. "pk_belt_out.ogg", t = 1.68 },
+            { s = path4 .. "pk_belt_out.ogg", t = 1.68 },
             { s = randspin, t = 2.28 },
             { s = path .. "rpd_mag_out.ogg", t = 2.4 },
             { s = randspin, t = 3.06 },
             { s = pouchin, t = 3.46 },
             { s = pouchout, t = 4.05 },
             { s = path .. "rpd_mag_in.ogg", t = 5.27 },
-            { s = path .. "pk_belt_roll.ogg", t = 6.39 },
+            { s = path4 .. "pk_belt_roll.ogg", t = 6.39 },
             { s = path .. "rpd_dust_close2.ogg", t = 7.54 },
             { s = randspin, t = 8.45 },
         },
@@ -625,11 +626,11 @@ SWEP.Animations = {
             { s = randspin, t = 0 },
             { s = path .. "rpd_dust_open.ogg", t = 2.45 - 1.8 - 4/25 },
             { s = path .. "rpd_mag_out.ogg", t = 3.37 - 1.8- 4/25 },
-            { s = path .. "pk_belt_out.ogg", t = 3.8 - 1.8- 4/25 },
+            { s = path4 .. "pk_belt_out.ogg", t = 3.8 - 1.8- 4/25 },
             { s = pouchout, t = 4.8 - 1.8- 4/25 },
             { s = randspin, t = 5.01 - 1.8- 4/25 },
             { s = path .. "rpd_mag_in.ogg", t = 5.96- 1.8 - 4/25 },
-            { s = path .. "pk_belt_roll.ogg", t = 7 - 1.8- 4/25 },
+            { s = path4 .. "pk_belt_roll.ogg", t = 7 - 1.8- 4/25 },
             { s = path .. "rpd_dust_close2.ogg", t = 8.15- 1.8 - 4/25 },
             { s = randspin, t = 9.18 - 1.8- 4/25 },
             
@@ -654,14 +655,14 @@ SWEP.Animations = {
             { s = randspin, t = 1.29 },
             { s = path .. "rpd_dust_open.ogg", t = 1.68 },
             { s = randspin, t = 2.43 },
-            { s = path .. "pk_belt_out.ogg", t = 2.8 },
+            { s = path4 .. "pk_belt_out.ogg", t = 2.8 },
             { s = path .. "rpd_mag_out.ogg", t = 3.5 },
             { s = randspin, t = 4.27 },
             { s = pouchin, t = 4.72 },
             { s = randspin, t = 5.64 },
             { s = pouchout, t = 5.25 },
             { s = path .. "rpd_mag_in.ogg", t = 6.52 },
-            { s = path .. "pk_belt_roll.ogg", t = 7.55 },
+            { s = path4 .. "pk_belt_roll.ogg", t = 7.55 },
             { s = path .. "rpd_dust_close2.ogg", t = 8.7 },
 
             { s = path .. "rpd_gun_flip_5.ogg", t = 9.33 },
@@ -686,11 +687,11 @@ SWEP.Animations = {
 
             { s = path .. "rpd_dust_open.ogg", t = 3.4- 1.8 - 4/25 },
             { s = path .. "rpd_mag_out.ogg", t = 4.31- 1.8 - 4/25 },
-            { s = path .. "pk_belt_out.ogg", t = 4.75- 1.8 - 4/25 },
+            { s = path4 .. "pk_belt_out.ogg", t = 4.75- 1.8 - 4/25 },
             { s = pouchout, t = 5.74- 1.8 - 4/25 },
             { s = randspin, t = 5.99- 1.8 - 4/25 },
             { s = path .. "rpd_mag_in.ogg", t = 6.95- 1.8 - 4/25 },
-            { s = path .. "pk_belt_roll.ogg", t = 7.93- 1.8 - 4/25 },
+            { s = path4 .. "pk_belt_roll.ogg", t = 7.93- 1.8 - 4/25 },
             { s = path .. "rpd_dust_close2.ogg", t = 9.1- 1.8 - 4/25 },
             
             { s = path .. "rpd_gun_flip_5.ogg", t = 9.71- 1.8 - 4/25 },
@@ -720,11 +721,11 @@ SWEP.Animations = {
             { s = randspin, t = 1.82 },
             { s = path .. "rpd_dust_open.ogg", t = 2.45 },
             { s = path .. "rpd_mag_out.ogg", t = 3.37 },
-            { s = path .. "pk_belt_out.ogg", t = 3.8 },
+            { s = path4 .. "pk_belt_out.ogg", t = 3.8 },
             { s = pouchout, t = 4.8 },
             { s = randspin, t = 5.01 },
             { s = path .. "rpd_mag_in.ogg", t = 5.96 },
-            { s = path .. "pk_belt_roll.ogg", t = 7 },
+            { s = path4 .. "pk_belt_roll.ogg", t = 7 },
             { s = path .. "rpd_dust_close2.ogg", t = 8.15 },
             { s = randspin, t = 9.18 },
             
@@ -752,11 +753,11 @@ SWEP.Animations = {
 
             { s = path .. "rpd_dust_open.ogg", t = 3.4 },
             { s = path .. "rpd_mag_out.ogg", t = 4.31 },
-            { s = path .. "pk_belt_out.ogg", t = 4.75 },
+            { s = path4 .. "pk_belt_out.ogg", t = 4.75 },
             { s = pouchout, t = 5.74 },
             { s = randspin, t = 5.99 },
             { s = path .. "rpd_mag_in.ogg", t = 6.95 },
-            { s = path .. "pk_belt_roll.ogg", t = 7.93 },
+            { s = path4 .. "pk_belt_roll.ogg", t = 7.93 },
             { s = path .. "rpd_dust_close2.ogg", t = 9.1 },
             
             { s = path .. "rpd_gun_flip_5.ogg", t = 9.71 },
@@ -827,7 +828,7 @@ SWEP.Animations = {
             { s = randspin, t = 0.05 },
             { s =  path .. "rpd_mag_check1.ogg", t = 0.73 },
             { s =  path .. "rpd_mag_check2.ogg", t = 1.72 },
-            { s =  path .. "pk_belt_5.ogg", t = 1.18 },
+            { s =  path4 .. "pk_belt_5.ogg", t = 1.18 },
             { s =  path .. "pk_gun_flip_5.ogg", t = 2.04 },
         },
     },
@@ -838,7 +839,7 @@ SWEP.Animations = {
             { s = randspin, t = 0.05 },
             { s =  path .. "rpd_mag_check1.ogg", t = 0.73 },
             { s =  path .. "rpd_mag_check2.ogg", t = 1.72 },
-            { s =  path .. "pk_belt_5.ogg", t = 1.18 },
+            { s =  path4 .. "pk_belt_5.ogg", t = 1.18 },
             { s =  path .. "pk_gun_flip_5.ogg", t = 2.04 },
         },
     },
