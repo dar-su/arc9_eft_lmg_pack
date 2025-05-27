@@ -189,16 +189,16 @@ end
 
 ------------------------- |||           Sounds            ||| -------------------------
 
-local path = "weapons/darsu_eft/pkm/"
+local path = ")weapons/darsu_eft/pkm/"
 
-SWEP.ShootSound = { path .. "pkm_outdoor_close_loop1.ogg", path .. "pkm_outdoor_close_loop2.ogg", path .. "pkm_outdoor_close_loop3.ogg", path .. "pkm_outdoor_close_loop4.ogg", path .. "pkm_outdoor_close_loop5.ogg" }
-SWEP.LayerSound = path .. "pkm_outdoor_close_loopt.ogg"
+SWEP.ShootSound = { path .. "pkm_outdoor_close_loop1.wav", path .. "pkm_outdoor_close_loop2.wav", path .. "pkm_outdoor_close_loop3.wav", path .. "pkm_outdoor_close_loop4.wav", path .. "pkm_outdoor_close_loop5.wav" }
+SWEP.LayerSound = path .. "pkm_outdoor_close_loopt.wav"
 
-SWEP.ShootSoundIndoor = { path .. "pkm_indoor_close_loop1.ogg", path .. "pkm_indoor_close_loop2.ogg", path .. "pkm_indoor_close_loop3.ogg" }
-SWEP.LayerSoundIndoor = path .. "pkm_indoor_close_loopt.ogg"
+SWEP.ShootSoundIndoor = { path .. "pkm_indoor_close_loop1.wav", path .. "pkm_indoor_close_loop2.wav", path .. "pkm_indoor_close_loop3.wav" }
+SWEP.LayerSoundIndoor = path .. "pkm_indoor_close_loopt.wav"
 
-SWEP.DistantShootSound = { path .. "pkm_outdoor_distant_loop1.ogg", path .. "pkm_outdoor_distant_loop2.ogg" }
-SWEP.DistantShootSoundIndoor = { path .. "pkm_indoor_distant_loop1.ogg", path .. "pkm_indoor_distant_loop2.ogg" }
+SWEP.DistantShootSound = { path .. "pkm_outdoor_distant_loop1.wav", path .. "pkm_outdoor_distant_loop2.wav" }
+SWEP.DistantShootSoundIndoor = { path .. "pkm_indoor_distant_loop1.wav", path .. "pkm_indoor_distant_loop2.wav" }
 
 SWEP.EnterSightsSound = ARC9EFT.ADSMachineGun
 SWEP.ExitSightsSound = ARC9EFT.ADSMachineGun
@@ -462,7 +462,7 @@ local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.ogg","arc9_eft_sha
 local pouchin = {"arc9_eft_shared/generic_mag_pouch_in1.ogg","arc9_eft_shared/generic_mag_pouch_in2.ogg","arc9_eft_shared/generic_mag_pouch_in3.ogg","arc9_eft_shared/generic_mag_pouch_in4.ogg","arc9_eft_shared/generic_mag_pouch_in5.ogg","arc9_eft_shared/generic_mag_pouch_in6.ogg","arc9_eft_shared/generic_mag_pouch_in7.ogg"}
 local pouchout = {"arc9_eft_shared/generic_mag_pouch_out1.ogg","arc9_eft_shared/generic_mag_pouch_out2.ogg","arc9_eft_shared/generic_mag_pouch_out3.ogg","arc9_eft_shared/generic_mag_pouch_out4.ogg","arc9_eft_shared/generic_mag_pouch_out5.ogg","arc9_eft_shared/generic_mag_pouch_out6.ogg","arc9_eft_shared/generic_mag_pouch_out7.ogg"}
 
-local beltt = {path .. "pk_belt_1.ogg",path .. "pk_belt_2.ogg",path .. "pk_belt_3.ogg",path .. "pk_belt_4.ogg",path .. "pk_belt_5.ogg",path .. "pk_belt_6.ogg",path .. "pk_belt_7.ogg",path .. "pk_belt_8.ogg",path .. "pk_belt_9.ogg" }
+local beltt = {path .. "pk_belt_1.wav",path .. "pk_belt_2.wav",path .. "pk_belt_3.wav",path .. "pk_belt_4.wav",path .. "pk_belt_5.wav",path .. "pk_belt_6.wav",path .. "pk_belt_7.wav",path .. "pk_belt_8.wav",path .. "pk_belt_9.wav" }
 
 local alwayslhik = {
     { t = 0, lhik = 1 },
@@ -538,7 +538,7 @@ SWEP.Animations = {
         Source = "fire",
         IKTimeLine = alwayslhik,
         EventTable = {
-            { s = path .. "ash12_trigger_hammer.ogg", t = 0 },
+            { s = path .. "ash12_trigger_hammer.wav", t = 0 },
             { s = beltt, t = 0.05 },
         }
     },
@@ -546,7 +546,7 @@ SWEP.Animations = {
         IKTimeLine = neverlhik,
         Source = {"fire_sights1", "fire_sights2", "fire_sights3"},
         EventTable = {
-            { s = path .. "ash12_trigger_hammer.ogg", t = 0 },
+            { s = path .. "ash12_trigger_hammer.wav", t = 0 },
             { s = beltt, t = 0.05 },
         }
     },
@@ -554,14 +554,14 @@ SWEP.Animations = {
         Source = "fire_dry",
         IKTimeLine = alwayslhik,
         EventTable = {
-            { s = path .. "ash12_trigger_empty.ogg", t = 0 },
+            { s = path .. "ash12_trigger_empty.wav", t = 0 },
         }
     },
     ["dryfire_sights"] = {
         Source = "fire_dry_sights",
         IKTimeLine = neverlhik,
         EventTable = {
-            { s = path .. "ash12_trigger_empty.ogg", t = 0 },
+            { s = path .. "ash12_trigger_empty.wav", t = 0 },
         }
     },
     ["dryfire_armed"] = {
@@ -636,7 +636,7 @@ SWEP.Animations = {
         EventTable = {
             { s = path .. "pk_gun_flip_2.ogg", t = 0.22 },
             { s = path .. "pk_cover_open.ogg", t = 1.24 },
-            { s = path .. "pk_belt_out.ogg", t = 2.02 },
+            { s = path .. "pk_belt_out.wav", t = 2.02 },
             { s = path .. "pk_gun_flip_4.ogg", t = 2.45 },
             { s = path .. "pk_mag_release.ogg", t = 2.54 },
             { s = path .. "pk_mag_out.ogg", t = 2.86+0.25 },
@@ -646,7 +646,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.76 },
             { s = path .. "pk_mag_flip_5.ogg", t = 4.5 },
             { s = path .. "pk_mag_in.ogg", t = 4.21+1.3 },
-            { s = path .. "pk_belt_in.ogg", t = 6.24 },
+            { s = path .. "pk_belt_in.wav", t = 6.24 },
             { s = path .. "pk_cover_close.ogg", t = 7.2 },
             { s = path .. "pk_gun_flip_2.ogg", t = 8.23 },
         },
@@ -670,7 +670,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.1 - 4/25 },
             { s = path .. "pk_mag_flip_2.ogg", t = 4.54  - 4/25},
             { s = path .. "pk_mag_in.ogg", t = 4.73  - 4/25},
-            { s = path .. "pk_belt_in.ogg", t = 5.55 - 4/25 },
+            { s = path .. "pk_belt_in.wav", t = 5.55 - 4/25 },
             { s = path .. "pk_gun_flip_1.ogg", t = 6.61  - 4/25},
             { s = path .. "pk_cover_close.ogg", t = 6.58  - 4/25},
             { s = path .. "pk_gun_flip_2.ogg", t = 7  - 4/25},
@@ -693,7 +693,7 @@ SWEP.Animations = {
             { s = path .. "pk_sight_button_out.ogg", t = 1.43 },
 
             { s = path .. "pk_cover_open.ogg", t = 1.24+0.8 },
-            { s = path .. "pk_belt_out.ogg", t = 2.02+0.9 },
+            { s = path .. "pk_belt_out.wav", t = 2.02+0.9 },
             { s = path .. "pk_gun_flip_4.ogg", t = 2.45+0.9 },
             { s = path .. "pk_mag_release.ogg", t = 2.54+0.9 },
             { s = path .. "pk_mag_out.ogg", t = 2.86+0.9 },
@@ -703,7 +703,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.76+0.9 },
             { s = path .. "pk_mag_flip_5.ogg", t = 4.5+0.9 },
             { s = path .. "pk_mag_in.ogg", t = 4.21+1.1+0.9 },
-            { s = path .. "pk_belt_in.ogg", t = 6.24+0.9 },
+            { s = path .. "pk_belt_in.wav", t = 6.24+0.9 },
             { s = path .. "pk_cover_close.ogg", t = 7.0+0.9 },
 
             { s = path .. "pk_gun_flip_5.ogg", t = 8.6 },
@@ -737,7 +737,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.1+0.7  - 4/25},
             { s = path .. "pk_mag_flip_2.ogg", t = 4.54+0.7  - 4/25},
             { s = path .. "pk_mag_in.ogg", t = 4.73+0.7 - 4/25 },
-            { s = path .. "pk_belt_in.ogg", t = 5.55+0.7 - 4/25 },
+            { s = path .. "pk_belt_in.wav", t = 5.55+0.7 - 4/25 },
             { s = path .. "pk_gun_flip_1.ogg", t = 6.61+0.7 - 4/25 },
             { s = path .. "pk_cover_close.ogg", t = 6.58+0.7 - 4/25 },
             
@@ -763,7 +763,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_2.ogg", t = 1.07 },
 
             { s = path .. "pk_cover_open.ogg", t = 1.24+0.7 },
-            { s = path .. "pk_belt_out.ogg", t = 2.02+0.8 },
+            { s = path .. "pk_belt_out.wav", t = 2.02+0.8 },
             { s = path .. "pk_gun_flip_4.ogg", t = 2.45+0.8 },
             { s = path .. "pk_mag_release.ogg", t = 2.54+0.8 },
             { s = path .. "pk_mag_out.ogg", t = 2.86+0.8 },
@@ -773,7 +773,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.76+0.8 },
             { s = path .. "pk_mag_flip_5.ogg", t = 4.5+0.8 },
             { s = path .. "pk_mag_in.ogg", t = 4.21+1.3+0.8 },
-            { s = path .. "pk_belt_in.ogg", t = 6.24+0.8 },
+            { s = path .. "pk_belt_in.wav", t = 6.24+0.8 },
             { s = path .. "pk_cover_close.ogg", t = 7.0+0.8 },
             { s = path .. "pk_gun_flip_2.ogg", t = 8.23+0.8 },
         },
@@ -799,7 +799,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.1+0.63 - 4/25 },
             { s = path .. "pk_mag_flip_2.ogg", t = 4.54+0.63 - 4/25 },
             { s = path .. "pk_mag_in.ogg", t = 4.73+0.63 - 4/25 },
-            { s = path .. "pk_belt_in.ogg", t = 5.55+0.63 - 4/25 },
+            { s = path .. "pk_belt_in.wav", t = 5.55+0.63 - 4/25 },
             { s = path .. "pk_gun_flip_1.ogg", t = 6.61+0.63 - 4/25 },
             { s = path .. "pk_cover_close.ogg", t = 6.58+0.63 - 4/25 },
             { s = path .. "pk_gun_flip_4.ogg", t = 7.45+0.63 - 4/25 },
@@ -824,7 +824,7 @@ SWEP.Animations = {
             { s = path .. "pk_sight_button_out.ogg", t = 1.43+0.8 },
 
             { s = path .. "pk_cover_open.ogg", t = 1.24+0.9+0.55 },
-            { s = path .. "pk_belt_out.ogg", t = 2.02+0.9+0.75 },
+            { s = path .. "pk_belt_out.wav", t = 2.02+0.9+0.75 },
             { s = path .. "pk_gun_flip_4.ogg", t = 2.45+0.9+0.85 },
             { s = path .. "pk_mag_release.ogg", t = 2.54+0.9+0.85 },
             { s = path .. "pk_mag_out.ogg", t = 2.86+0.9+0.85 },
@@ -834,7 +834,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.76+0.9+0.85 },
             { s = path .. "pk_mag_flip_5.ogg", t = 4.5+0.9+0.85 },
             { s = path .. "pk_mag_in.ogg", t = 4.21+1.1+0.9+0.85 },
-            { s = path .. "pk_belt_in.ogg", t = 6.24+0.9+0.85 },
+            { s = path .. "pk_belt_in.wav", t = 6.24+0.9+0.85 },
             { s = path .. "pk_cover_close.ogg", t = 7.0+0.9+0.85 },
 
             { s = path .. "pk_gun_flip_5.ogg", t = 8.6+0.8 },
@@ -870,7 +870,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.1+0.7+0.63 - 4/25 },
             { s = path .. "pk_mag_flip_2.ogg", t = 4.54+0.7+0.63 - 4/25 },
             { s = path .. "pk_mag_in.ogg", t = 4.73+0.7+0.63 - 4/25 },
-            { s = path .. "pk_belt_in.ogg", t = 5.55+0.7+0.63 - 4/25 },
+            { s = path .. "pk_belt_in.wav", t = 5.55+0.7+0.63 - 4/25 },
             { s = path .. "pk_gun_flip_1.ogg", t = 6.61+0.7+0.63 - 4/25 },
             { s = path .. "pk_cover_close.ogg", t = 6.58+0.7+0.63 - 4/25 },
             
@@ -906,7 +906,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.1 },
             { s = path .. "pk_mag_flip_2.ogg", t = 4.54 },
             { s = path .. "pk_mag_in.ogg", t = 4.73 },
-            { s = path .. "pk_belt_in.ogg", t = 5.55 },
+            { s = path .. "pk_belt_in.wav", t = 5.55 },
             { s = path .. "pk_gun_flip_1.ogg", t = 6.61 },
             { s = path .. "pk_cover_close.ogg", t = 6.58 },
             { s = path .. "pk_gun_flip_4.ogg", t = 7.45 },
@@ -942,7 +942,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.1+0.7 },
             { s = path .. "pk_mag_flip_2.ogg", t = 4.54+0.7 },
             { s = path .. "pk_mag_in.ogg", t = 4.73+0.7 },
-            { s = path .. "pk_belt_in.ogg", t = 5.55+0.7 },
+            { s = path .. "pk_belt_in.wav", t = 5.55+0.7 },
             { s = path .. "pk_gun_flip_1.ogg", t = 6.61+0.7 },
             { s = path .. "pk_cover_close.ogg", t = 6.58+0.7 },
             
@@ -980,7 +980,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.1+0.63 },
             { s = path .. "pk_mag_flip_2.ogg", t = 4.54+0.63 },
             { s = path .. "pk_mag_in.ogg", t = 4.73+0.63 },
-            { s = path .. "pk_belt_in.ogg", t = 5.55+0.63 },
+            { s = path .. "pk_belt_in.wav", t = 5.55+0.63 },
             { s = path .. "pk_gun_flip_1.ogg", t = 6.61+0.63 },
             { s = path .. "pk_cover_close.ogg", t = 6.58+0.63 },
             { s = path .. "pk_gun_flip_4.ogg", t = 7.45+0.63 },
@@ -1018,7 +1018,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_3.ogg", t = 4.1+0.7+0.63 },
             { s = path .. "pk_mag_flip_2.ogg", t = 4.54+0.7+0.63 },
             { s = path .. "pk_mag_in.ogg", t = 4.73+0.7+0.63 },
-            { s = path .. "pk_belt_in.ogg", t = 5.55+0.7+0.63 },
+            { s = path .. "pk_belt_in.wav", t = 5.55+0.7+0.63 },
             { s = path .. "pk_gun_flip_1.ogg", t = 6.61+0.7+0.63 },
             { s = path .. "pk_cover_close.ogg", t = 6.58+0.7+0.63 },
             
@@ -1096,7 +1096,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_2.ogg", t = 1.12 },
             { s = path .. "pk_gun_flip_1.ogg", t = 1.5 },
             { s = path .. "pk_cover_open.ogg", t = 2.63 },
-            { s = path .. "pk_belt_out.ogg", t = 3.53 },
+            { s = path .. "pk_belt_out.wav", t = 3.53 },
             { s = path .. "pk_charge_out.ogg", t = 4 },
             { s = path .. "pk_charge_in.ogg", t = 4.5 },
             { s = path .. "pk_gun_flip_1.ogg", t = 4.6 },
@@ -1104,10 +1104,10 @@ SWEP.Animations = {
             { s = path .. "pk_dust_chamber_out.ogg", t = 5.93 },
             { s = path .. "pk_dust_close.ogg", t = 6.9 },
             { s = ARC9EFT.Shells556, t = 7.3 },
-            { s = path .. "pk_belt_in.ogg", t = 8.34 },
-            { s = path .. "pk_belt_8.ogg", t = 9.16 },
+            { s = path .. "pk_belt_in.wav", t = 8.34 },
+            { s = path .. "pk_belt_8.wav", t = 9.16 },
             { s = path .. "pk_chamber_in.ogg", t = 9.79 },
-            { s = path .. "pk_belt_3.ogg", t = 10.82 },
+            { s = path .. "pk_belt_3.wav", t = 10.82 },
             { s = path .. "pk_cover_close.ogg", t = 11.4 },
             { s = path .. "pk_gun_flip_2.ogg", t = 12.32 },
 
@@ -1126,7 +1126,7 @@ SWEP.Animations = {
             { s = path .. "pk_sight_button_out.ogg", t = 3.04 },
 
             { s = path .. "pk_cover_open.ogg", t = 2.63+0.73 },
-            { s = path .. "pk_belt_out.ogg", t = 3.53+0.73 },
+            { s = path .. "pk_belt_out.wav", t = 3.53+0.73 },
             { s = path .. "pk_charge_out.ogg", t = 4+0.73 },
             { s = path .. "pk_charge_in.ogg", t = 4.5+0.73 },
             { s = path .. "pk_gun_flip_1.ogg", t = 4.6+0.73 },
@@ -1134,10 +1134,10 @@ SWEP.Animations = {
             { s = path .. "pk_dust_chamber_out.ogg", t = 5.93+0.73 },
             { s = path .. "pk_dust_close.ogg", t = 6.9+0.73 },
             { s = ARC9EFT.Shells556, t = 7.3+0.73 },
-            { s = path .. "pk_belt_in.ogg", t = 8.34+0.7 },
-            { s = path .. "pk_belt_8.ogg", t = 9.16+0.7 },
+            { s = path .. "pk_belt_in.wav", t = 8.34+0.7 },
+            { s = path .. "pk_belt_8.wav", t = 9.16+0.7 },
             { s = path .. "pk_chamber_in.ogg", t = 9.79+0.7 },
-            { s = path .. "pk_belt_3.ogg", t = 10.82+0.7 },
+            { s = path .. "pk_belt_3.wav", t = 10.82+0.7 },
             { s = path .. "pk_cover_close.ogg", t = 11.4+0.7 },
 
 
@@ -1164,7 +1164,7 @@ SWEP.Animations = {
                 { s = path .. "ak_jam_stuckbolt_out_hit1.ogg", t = 4 },
                 { s = path .. "ak_jam_stuckbolt_in2.ogg", t = 4.57 },
                 { s = path .. "pk_charge_out.ogg", t = 4.95 },
-                { s = path .. "pk_belt_3.ogg", t = 5 },
+                { s = path .. "pk_belt_3.wav", t = 5 },
                 { s = path .. "pk_charge_in.ogg", t = 5.57 },
                 { s = path .. "pk_gun_flip_2.ogg", t = 6 },
             },
@@ -1181,7 +1181,7 @@ SWEP.Animations = {
             { s = path .. "ak_jam_stuckbolt_in1.ogg", t = 2.38 },
             { s = path .. "ak_jam_stuckbolt_in2.ogg", t = 2.85 },
             { s = path .. "pk_charge_out.ogg", t = 3.25 },
-            { s = path .. "pk_belt_3.ogg", t = 3.3 },
+            { s = path .. "pk_belt_3.wav", t = 3.3 },
             { s = path .. "pk_charge_in.ogg", t = 3.7 },
             { s = path .. "pk_gun_flip_2.ogg", t = 4.25 },
         },
@@ -1230,7 +1230,7 @@ SWEP.Animations = {
             { s = path .. "pk_gun_flip_2.ogg", t = 1.12+0.66 },
             { s = path .. "pk_gun_flip_1.ogg", t = 1.5+0.66 },
             { s = path .. "pk_cover_open.ogg", t = 2.63+0.66 },
-            { s = path .. "pk_belt_out.ogg", t = 3.53+0.66 },
+            { s = path .. "pk_belt_out.wav", t = 3.53+0.66 },
             { s = path .. "pk_charge_out.ogg", t = 4+0.66 },
             { s = path .. "pk_charge_in.ogg", t = 4.5+0.66 },
             { s = path .. "pk_gun_flip_1.ogg", t = 4.6+0.66 },
@@ -1238,10 +1238,10 @@ SWEP.Animations = {
             { s = path .. "pk_dust_chamber_out.ogg", t = 5.93+0.66 },
             { s = path .. "pk_dust_close.ogg", t = 6.9+0.66 },
             { s = ARC9EFT.Shells556, t = 7.3+0.66 },
-            { s = path .. "pk_belt_in.ogg", t = 8.34+0.66 },
-            { s = path .. "pk_belt_8.ogg", t = 9.16+0.66 },
+            { s = path .. "pk_belt_in.wav", t = 8.34+0.66 },
+            { s = path .. "pk_belt_8.wav", t = 9.16+0.66 },
             { s = path .. "pk_chamber_in.ogg", t = 9.79+0.66 },
-            { s = path .. "pk_belt_3.ogg", t = 10.82+0.66 },
+            { s = path .. "pk_belt_3.wav", t = 10.82+0.66 },
             { s = path .. "pk_cover_close.ogg", t = 11.4+0.66 },
             { s = path .. "pk_gun_flip_2.ogg", t = 12.32+0.66 },
         },
@@ -1267,7 +1267,7 @@ SWEP.Animations = {
             { s = path .. "pk_sight_button_out.ogg", t = 3.04+0.54 },
 
             { s = path .. "pk_cover_open.ogg", t = 2.63+0.73+0.54 },
-            { s = path .. "pk_belt_out.ogg", t = 3.53+0.73+0.54 },
+            { s = path .. "pk_belt_out.wav", t = 3.53+0.73+0.54 },
             { s = path .. "pk_charge_out.ogg", t = 4+0.73+0.54 },
             { s = path .. "pk_charge_in.ogg", t = 4.5+0.73+0.54 },
             { s = path .. "pk_gun_flip_1.ogg", t = 4.6+0.73+0.54 },
@@ -1275,10 +1275,10 @@ SWEP.Animations = {
             { s = path .. "pk_dust_chamber_out.ogg", t = 5.93+0.73+0.54 },
             { s = path .. "pk_dust_close.ogg", t = 6.9+0.73+0.54 },
             { s = ARC9EFT.Shells556, t = 7.3+0.73+0.54 },
-            { s = path .. "pk_belt_in.ogg", t = 8.34+0.7+0.54 },
-            { s = path .. "pk_belt_8.ogg", t = 9.16+0.7+0.54 },
+            { s = path .. "pk_belt_in.wav", t = 8.34+0.7+0.54 },
+            { s = path .. "pk_belt_8.wav", t = 9.16+0.7+0.54 },
             { s = path .. "pk_chamber_in.ogg", t = 9.79+0.7+0.54 },
-            { s = path .. "pk_belt_3.ogg", t = 10.82+0.7+0.54 },
+            { s = path .. "pk_belt_3.wav", t = 10.82+0.7+0.54 },
             { s = path .. "pk_cover_close.ogg", t = 11.4+0.7+0.54 },
 
             { s = path .. "pk_sight_button_in.ogg", t = 13.07+0.54 },
@@ -1311,7 +1311,7 @@ SWEP.Animations = {
                 { s = path .. "ak_jam_stuckbolt_out_hit1.ogg", t = 4+0.61 },
                 { s = path .. "ak_jam_stuckbolt_in2.ogg", t = 4.57+0.61 },
                 { s = path .. "pk_charge_out.ogg", t = 4.95+0.61 },
-                { s = path .. "pk_belt_3.ogg", t = 5+0.61 },
+                { s = path .. "pk_belt_3.wav", t = 5+0.61 },
                 { s = path .. "pk_charge_in.ogg", t = 5.57+0.61 },
                 { s = path .. "pk_gun_flip_2.ogg", t = 6+0.61 },
         },
@@ -1336,7 +1336,7 @@ SWEP.Animations = {
             { s = path .. "ak_jam_stuckbolt_in1.ogg", t = 2.38+0.49 },
             { s = path .. "ak_jam_stuckbolt_in2.ogg", t = 2.85+0.49 },
             { s = path .. "pk_charge_out.ogg", t = 3.25+0.49 },
-            { s = path .. "pk_belt_3.ogg", t = 3.3+0.49 },
+            { s = path .. "pk_belt_3.wav", t = 3.3+0.49 },
             { s = path .. "pk_charge_in.ogg", t = 3.7+0.49 },
             { s = path .. "pk_gun_flip_2.ogg", t = 4.25+0.49 },
         },
@@ -1372,7 +1372,7 @@ SWEP.Animations = {
         IKTimeLine = alwayslhik,
         EventTable = {
             { s =  path .. "pk_gun_flip_3.ogg", t = 0.28 },
-            { s =  path .. "pk_belt_5.ogg", t = 1.18 },
+            { s =  path .. "pk_belt_5.wav", t = 1.18 },
             { s =  path .. "pk_dust_open.ogg", t = 1.33-0.2 },
             { s =  path .. "pk_dust_close.ogg", t = 2.74-0.75 },
             { s =  path .. "pk_gun_flip_2.ogg", t = 3.3-0.2 },

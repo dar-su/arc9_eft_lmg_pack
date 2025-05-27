@@ -199,27 +199,27 @@ end
 
 ------------------------- |||           Sounds            ||| -------------------------
 
-local path = "weapons/darsu_eft/m60/"
-local path2 = "weapons/darsu_eft/m60/fire/"
-local path3 = "weapons/darsu_eft/rpd/fire/"
-local path4 = "weapons/darsu_eft/pkm/"
+local path = ")weapons/darsu_eft/m60/"
+local path2 = ")weapons/darsu_eft/m60/fire/"
+local path3 = ")weapons/darsu_eft/rpd/fire/"
+local path4 = ")weapons/darsu_eft/pkm/"
 
-SWEP.ShootSound = { path2 .. "m60_outdoor_close_loop1.ogg", path2 .. "m60_outdoor_close_loop2.ogg", path2 .. "m60_outdoor_close_loop3.ogg", path2 .. "m60_outdoor_close_loop4.ogg" }
-SWEP.LayerSound = path2 .. "m60_outdoor_close_tail.ogg"
+SWEP.ShootSound = { path2 .. "m60_outdoor_close_loop1.wav", path2 .. "m60_outdoor_close_loop2.wav", path2 .. "m60_outdoor_close_loop3.wav", path2 .. "m60_outdoor_close_loop4.wav" }
+SWEP.LayerSound = path2 .. "m60_outdoor_close_tail.wav"
 
-SWEP.ShootSoundSilenced = { path2 .. "m60_outdoor_silenced_close_loop1.ogg", path2 .. "m60_outdoor_silenced_close_loop2.ogg", path2 .. "m60_outdoor_silenced_close_loop3.ogg", path2 .. "m60_outdoor_silenced_close_loop4.ogg" }
-SWEP.LayerSoundSilenced = path2 .. "m60_outdoor_silenced_close_tail.ogg"
+SWEP.ShootSoundSilenced = { path2 .. "m60_outdoor_silenced_close_loop1.wav", path2 .. "m60_outdoor_silenced_close_loop2.wav", path2 .. "m60_outdoor_silenced_close_loop3.wav", path2 .. "m60_outdoor_silenced_close_loop4.wav" }
+SWEP.LayerSoundSilenced = path2 .. "m60_outdoor_silenced_close_tail.wav"
 
-SWEP.ShootSoundIndoor = { path2 .. "m60_indoor_close_loop1.ogg", path2 .. "m60_indoor_close_loop2.ogg", path2 .. "m60_indoor_close_loop3.ogg", path2 .. "m60_indoor_close_loop4.ogg" }
-SWEP.LayerSoundIndoor = path2 .. "m60_indoor_close_tail.ogg"
+SWEP.ShootSoundIndoor = { path2 .. "m60_indoor_close_loop1.wav", path2 .. "m60_indoor_close_loop2.wav", path2 .. "m60_indoor_close_loop3.wav", path2 .. "m60_indoor_close_loop4.wav" }
+SWEP.LayerSoundIndoor = path2 .. "m60_indoor_close_tail.wav"
 
-SWEP.ShootSoundSilencedIndoor = { path2 .. "m60_indoor_silenced_close_loop1.ogg", path2 .. "m60_indoor_silenced_close_loop2.ogg", path2 .. "m60_indoor_silenced_close_loop3.ogg", path2 .. "m60_indoor_silenced_close_loop4.ogg" }
-SWEP.LayerSoundSilencedIndoor = path2 .. "m60_indoor_silenced_close_tail.ogg"
+SWEP.ShootSoundSilencedIndoor = { path2 .. "m60_indoor_silenced_close_loop1.wav", path2 .. "m60_indoor_silenced_close_loop2.wav", path2 .. "m60_indoor_silenced_close_loop3.wav", path2 .. "m60_indoor_silenced_close_loop4.wav" }
+SWEP.LayerSoundSilencedIndoor = path2 .. "m60_indoor_silenced_close_tail.wav"
 
-SWEP.DistantShootSound = { path3 .. "rpd_outdoor_distant_loop1.ogg", path3 .. "rpd_outdoor_distant_loop2.ogg" }
-SWEP.DistantShootSoundSilenced = { path2 .. "m60_outdoor_silenced_distant_loop1.ogg", path2 .. "m60_outdoor_silenced_distant_loop2.ogg" }
-SWEP.DistantShootSoundIndoor = { path2 .. "m60_indoor_distant_loop1.ogg", path2 .. "m60_indoor_distant_loop2.ogg" }
-SWEP.DistantShootSoundSilencedIndoor = { path2 .. "m60_indoor_silenced_distant_loop1.ogg", path2 .. "m60_indoor_silenced_distant_loop2.ogg" }
+SWEP.DistantShootSound = { path3 .. "rpd_outdoor_distant_loop1.wav", path3 .. "rpd_outdoor_distant_loop2.wav" }
+SWEP.DistantShootSoundSilenced = { path2 .. "m60_outdoor_silenced_distant_loop1.wav", path2 .. "m60_outdoor_silenced_distant_loop2.wav" }
+SWEP.DistantShootSoundIndoor = { path2 .. "m60_indoor_distant_loop1.wav", path2 .. "m60_indoor_distant_loop2.wav" }
+SWEP.DistantShootSoundSilencedIndoor = { path2 .. "m60_indoor_silenced_distant_loop1.wav", path2 .. "m60_indoor_silenced_distant_loop2.wav" }
 
 SWEP.EnterSightsSound = ARC9EFT.ADSMachineGun
 SWEP.ExitSightsSound = ARC9EFT.ADSMachineGun
@@ -414,7 +414,7 @@ local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.ogg","arc9_eft_sha
 local pouchin = {"arc9_eft_shared/generic_mag_pouch_in1.ogg","arc9_eft_shared/generic_mag_pouch_in2.ogg","arc9_eft_shared/generic_mag_pouch_in3.ogg","arc9_eft_shared/generic_mag_pouch_in4.ogg","arc9_eft_shared/generic_mag_pouch_in5.ogg","arc9_eft_shared/generic_mag_pouch_in6.ogg","arc9_eft_shared/generic_mag_pouch_in7.ogg"}
 local pouchout = {"arc9_eft_shared/generic_mag_pouch_out1.ogg","arc9_eft_shared/generic_mag_pouch_out2.ogg","arc9_eft_shared/generic_mag_pouch_out3.ogg","arc9_eft_shared/generic_mag_pouch_out4.ogg","arc9_eft_shared/generic_mag_pouch_out5.ogg","arc9_eft_shared/generic_mag_pouch_out6.ogg","arc9_eft_shared/generic_mag_pouch_out7.ogg"}
 
-local beltt = {path4 .. "pk_belt_1.ogg",path4 .. "pk_belt_2.ogg",path4 .. "pk_belt_3.ogg",path4 .. "pk_belt_4.ogg",path4 .. "pk_belt_5.ogg",path4 .. "pk_belt_6.ogg",path4 .. "pk_belt_7.ogg",path4 .. "pk_belt_8.ogg",path4 .. "pk_belt_9.ogg" }
+local beltt = {path4 .. "pk_belt_1.wav",path4 .. "pk_belt_2.wav",path4 .. "pk_belt_3.wav",path4 .. "pk_belt_4.wav",path4 .. "pk_belt_5.wav",path4 .. "pk_belt_6.wav",path4 .. "pk_belt_7.wav",path4 .. "pk_belt_8.wav",path4 .. "pk_belt_9.wav" }
 
 local alwayslhik = {
     { t = 0, lhik = 1 },
@@ -473,7 +473,7 @@ SWEP.Animations = {
         Source = "fire",
         IKTimeLine = alwayslhik,
         EventTable = {
-            { s = path .. "ash12_trigger_hammer.ogg", t = 0 },
+            { s = path .. "ash12_trigger_hammer.wav", t = 0 },
             { s = beltt, t = 0.05 },
         }
     },
@@ -481,7 +481,7 @@ SWEP.Animations = {
         Source = "fire_end",
         IKTimeLine = alwayslhik,
         EventTable = {
-            { s = path .. "ash12_trigger_hammer.ogg", t = 0 },
+            { s = path .. "ash12_trigger_hammer.wav", t = 0 },
             { s = beltt, t = 0.05 },
         }
     },
@@ -489,7 +489,7 @@ SWEP.Animations = {
         Source = "idle",
         IKTimeLine = alwayslhik,
         EventTable = {
-            { s = path .. "ash12_trigger_empty.ogg", t = 0 },
+            { s = path .. "ash12_trigger_empty.wav", t = 0 },
         }
     },
     ["dryfire_armed"] = {
@@ -509,14 +509,14 @@ SWEP.Animations = {
         EventTable = {
             { s =  path .. "m60_gunflip_1.ogg", t = 0.1 },
             { s = path .. "m60_dust_open.ogg", t = 0.93 - 0.3 },
-            { s = path4 .. "pk_belt_roll.ogg", t = 1.6 },
+            { s = path4 .. "pk_belt_roll.wav", t = 1.6 },
             { s = path .. "m60_mag_out.ogg", t = 2.45 },
             { s = randspin, t = 2.8 },
             { s = pouchin, t = 2.9 },
             { s = pouchout, t = 3.5 },
             { s = randspin, t = 3.57 },
             { s = path .. "m60_mag_in.ogg", t = 4.12 },
-            { s = path .. "m60_belt_setup.ogg", t = 4.8 },
+            { s = path .. "m60_belt_setup.wav", t = 4.8 },
             { s = beltt, t = 5.1 },
             { s = path .. "m60_close_cover.ogg", t = 7.0 - 0.2 },
             { s =  path .. "m60_gunflip_3.ogg", t = 7.7 },
@@ -544,7 +544,7 @@ SWEP.Animations = {
             { s = pouchout, t = 2.85 - 4/25 },
             { s = randspin, t = 2.93 - 4/25 },
             { s = path .. "m60_mag_in.ogg", t = 3.58 - 4/25 },
-            { s = path .. "m60_belt_setup.ogg", t = 4.54 - 0.38 - 4/25 },
+            { s = path .. "m60_belt_setup.wav", t = 4.54 - 0.38 - 4/25 },
             { s = beltt, t = 4.5 - 4/25 },
             { s = path .. "m60_close_cover.ogg", t = 6.39 - 0.2 - 4/25 },
             { s = randspin, t = 7 - 4/25 },
@@ -575,7 +575,7 @@ SWEP.Animations = {
             { s = pouchout, t = 2.85 },
             { s = randspin, t = 2.93 },
             { s = path .. "m60_mag_in.ogg", t = 3.58 },
-            { s = path .. "m60_belt_setup.ogg", t = 4.54 - 0.38 },
+            { s = path .. "m60_belt_setup.wav", t = 4.54 - 0.38 },
             { s = beltt, t = 4.5 },
             { s = path .. "m60_close_cover.ogg", t = 6.39 - 0.2 },
             { s = randspin, t = 7 },
