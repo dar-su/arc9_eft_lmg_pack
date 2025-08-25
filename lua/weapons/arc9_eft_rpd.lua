@@ -72,6 +72,9 @@ SWEP.Firemodes = { { Mode = -1} }
 SWEP.Slot = 3
 SWEP.ReloadInSights = false 
 
+SWEP.ChamberSize = 0
+SWEP.ClipSize = 0
+
 ------------------------- |||           Recoil            ||| -------------------------
 
 SWEP.Recoil = 1 -- general multiplier of main recoil
