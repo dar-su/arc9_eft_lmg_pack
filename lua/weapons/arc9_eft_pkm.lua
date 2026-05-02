@@ -259,6 +259,8 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     -- local rand = 0
     local nomag = false
 
+    local nosightanim = elements["eft_foregrip_b25u"] and !swep:GetBipod()
+
     if elements["eft_pkm_mag_100"] then ending = 0
     else nomag = true end
 
@@ -297,7 +299,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         if anim == "reload" and empty then anim = "reload_empty" end -- ??? 
         if nomag then return "reload_single" .. (itspkp and "_m" or "") end
 
-        local animla = (anim .. ending .. (itspkp and "_m" or "") .. ((swep:GetSightAmount() > 0.5 or swep:GetBipod()) and "_sights" or ""))
+        local animla = (anim .. ending .. (itspkp and "_m" or "") .. (((swep:GetSightAmount() > 0.5 or swep:GetBipod()) and !nosightanim) and "_sights" or ""))
 
         if swep.EFT_StartedTacReload then
             if SERVER then timer.Simple(0.3, function() if IsValid(swep) then swep:SetClip1(1) end end) end
@@ -330,18 +332,23 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
             end)
         end
         -- print("llaodfod", swep:GetBipod())
-        return "jam" .. rand .. ((rand == 2 and itspkp) and "_m" or "") .. ((swep:GetInSights() or swep:GetBipod()) and "_sights" or "")
+        return "jam" .. rand .. ((rand == 2 and itspkp) and "_m" or "") .. (((swep:GetInSights() or swep:GetBipod()) and !nosightanim) and "_sights" or "")
     elseif anim == "draw" or anim == "ready" then
         if swep:GetValue("LHIK") then return anim .. "_lhik" end
     elseif anim == "fire" or anim == "fire_sights" then
         swep:SetEFTArmedDryfire(true)
+        if nosightanim then return "fire" end
     elseif anim == "dryfire" or anim == "dryfire_sights" then
+        if nosightanim then anim = "dryfire" end
         if swep:GetEFTArmedDryfire() then
             swep:SetEFTArmedDryfire(false)
             return anim .. "_armed"
         end
+        return anim
     elseif anim == "enter_sights" and swep:GetBipod() 
         then return "bipodfuckthis_enter"
+    elseif nosightanim and anim == "idle_sights"
+        then return "idle"
     end
 
     -- print("nomag:", nomag, "rand:", rand, "anim:", anim, "ending:", ending)
@@ -1497,6 +1504,14 @@ SWEP.AttachmentElements = {
     ["eft_stock_pkm_pl"] = { Bodygroups = { {11, 2} } },
     ["eft_stock_pkm_zenit"] = { Bodygroups = { {11, 3} } },
 }
+
+SWEP.InstantSightIdleHook = function(swep, old)
+    return swep:GetElements()["eft_foregrip_b25u"] and !swep:GetBipod()
+end
+
+SWEP.NoFireDuringSightingHook = function(swep, old)
+    return !(swep:GetElements()["eft_foregrip_b25u"] and !swep:GetBipod())
+end
 
 SWEP.NoFireDuringSighting = true
 SWEP.SightIsAlsoBipodAnims = true
