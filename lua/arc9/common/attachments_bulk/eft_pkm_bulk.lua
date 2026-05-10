@@ -32,6 +32,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 646371faf2404ab67905c8e9
 ARC9.LoadAttachment(ATT, "eft_barrel_pkm")
 
 ///////////////////////////////////////      eft_barrel_pkp
@@ -60,6 +61,7 @@ ATT.LHIK = true
 
 ATT.Category = {"eft_pk_barrel"}
 
+-- EFT ID: 64639a9aab86f8fd4300146c
 ARC9.LoadAttachment(ATT, "eft_barrel_pkp")
 
 
@@ -83,6 +85,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pkm_muzzle"}
 
+-- EFT ID: 6492ef63cfcf7c89e701abf1
 ARC9.LoadAttachment(ATT, "eft_muzzle_pkm_dtk1p")
 
 ///////////////////////////////////////      eft_muzzle_pkm_fh
@@ -104,6 +107,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pkm_muzzle"}
 
+-- EFT ID: 6492efb8cfcf7c89e701abf3
 ARC9.LoadAttachment(ATT, "eft_muzzle_pkm_fh")
 
 ///////////////////////////////////////      eft_muzzle_pkm_mb
@@ -127,6 +131,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pkm_muzzle"}
 
+-- EFT ID: 6492efe46cc7e29a6f03b2a0
 ARC9.LoadAttachment(ATT, "eft_muzzle_pkm_mb")
 
 ///////////////////////////////////////      eft_pkm_mag_100
@@ -151,6 +156,7 @@ ATT.MalfunctionMeanShotsToFailMult = 0.99
 
 ATT.Category = {"eft_mag_pkm"}
 
+-- EFT ID: 646372518610c40fc20204e8
 ARC9.LoadAttachment(ATT, "eft_pkm_mag_100")
 
 ///////////////////////////////////////      eft_pkm_bipod
@@ -179,6 +185,7 @@ ATT.SwayMultBipod = 0.1
 
 ATT.Category = {"eft_bipod_pkm"}
 
+-- EFT ID: 6464d870bb2c580352070cc4
 ARC9.LoadAttachment(ATT, "eft_pkm_bipod")
 
 
@@ -233,6 +240,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 6491c6f6ef312a876705191b
 ARC9.LoadAttachment(ATT, "eft_hg_pk_zenit")
 
 ///////////////////////////////////////      eft_mount_b50_66
@@ -263,6 +271,7 @@ ATT.Attachments = {
 }
 
 
+-- EFT ID: 6492c8bba6e68e06fb0bae87
 ARC9.LoadAttachment(ATT, "eft_mount_b50_66")
 
 ///////////////////////////////////////      eft_mount_b50_16
@@ -291,6 +300,7 @@ ATT.Attachments = {
 
 ATT.ExcludeElements = {"eft_barrel_pkp" }
 
+-- EFT ID: 6492c6dd60fdb10a020621a2
 ARC9.LoadAttachment(ATT, "eft_mount_b50_16")
 
 ///////////////////////////////////////      eft_pg_pk
@@ -312,6 +322,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pk_pg"}
 
+-- EFT ID: 646371779f5f0ea59a04c204
 ARC9.LoadAttachment(ATT, "eft_pg_pk")
 
 ///////////////////////////////////////      eft_pg_pkb
@@ -333,6 +344,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pk_pg"}
 
+-- EFT ID: 64cbad529f7cf7f75c077fd5
 ARC9.LoadAttachment(ATT, "eft_pg_pkb")
 
 ///////////////////////////////////////      eft_rs_pk
@@ -349,6 +361,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pk_rs"}
 
+-- EFT ID: 6492fb8253acae0af00a29b6
 ARC9.LoadAttachment(ATT, "eft_rs_pk")
 
 ///////////////////////////////////////      eft_stock_pkm_wood
@@ -370,6 +383,7 @@ ATT.RecoilMult = 0.72
 
 ATT.Category = {"eft_pk_stock"}
 
+-- EFT ID: 646371a9f2404ab67905c8e6
 ARC9.LoadAttachment(ATT, "eft_stock_pkm_wood")
 
 ///////////////////////////////////////      eft_stock_pkm_pl
@@ -391,6 +405,7 @@ ATT.RecoilMult = 0.71
 
 ATT.Category = {"eft_pk_stock"}
 
+-- EFT ID: 6492e3a97df7d749100e29ee
 ARC9.LoadAttachment(ATT, "eft_stock_pkm_pl")
 
 ///////////////////////////////////////      eft_stock_pkm_zenit
@@ -429,4 +444,5 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 6492d7847363b8a52206bc52
 ARC9.LoadAttachment(ATT, "eft_stock_pkm_zenit")

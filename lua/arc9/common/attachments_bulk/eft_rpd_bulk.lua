@@ -39,6 +39,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 6513eff1e06849f06c0957d4
 ARC9.LoadAttachment(ATT, "eft_rpd_barrel_520")
 
 ///////////////////////////////////////      eft_rpd_barrel_350
@@ -53,7 +54,6 @@ ATT.Description = [[A 350mm barrel shortened by an unknown artisan for the RPD m
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -3
-ATT.CustomCons = { Ergonomics = "-3" }
 ATT.RecoilMult = 0.98
 ATT.VisualRecoilMult = 0.98
 ATT.SpreadOverride = 2.13 * ARC9.MOAToAcc
@@ -73,6 +73,7 @@ ATT.Attachments = {
     },
 }
 
+-- EFT ID: 65266fd43341ed9aa903dd56
 ARC9.LoadAttachment(ATT, "eft_rpd_barrel_350")
 
 ///////////////////////////////////////      eft_rpd_muzzle
@@ -92,6 +93,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_muzzle_rpd"}
 
+-- EFT ID: 6513f0f5e63f29908d0ffab8
 ARC9.LoadAttachment(ATT, "eft_rpd_muzzle")
 
 ///////////////////////////////////////      eft_rpd_bipod
@@ -119,6 +121,7 @@ ATT.SwayMultBipod = 0.1
 
 ATT.Category = {"eft_bipod_rpd"}
 
+-- EFT ID: 6513f037e06849f06c0957d7
 ARC9.LoadAttachment(ATT, "eft_rpd_bipod")
 
 
@@ -136,6 +139,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_rpd_rs"}
 
+-- EFT ID: 6513f153e63f29908d0ffaba
 ARC9.LoadAttachment(ATT, "eft_rpd_rearsight")
 
 ///////////////////////////////////////      eft_rpd_hg
@@ -157,6 +161,7 @@ ATT.CustomPros = { Ergonomics = "+5" }
 
 ATT.Category = {"eft_rpd_handguard"}
 
+-- EFT ID: 6513f05a94c72326990a3866
 ARC9.LoadAttachment(ATT, "eft_rpd_hg")
 
 
@@ -189,6 +194,7 @@ ATT.Attachments = {
         Ang = Angle(0, -90, 0),
     },
 }
+-- EFT ID: 6513f1798cb24472490ee331
 ARC9.LoadAttachment(ATT, "eft_rpd_stock")
 
 ///////////////////////////////////////      eft_rpd_pg
@@ -210,6 +216,7 @@ ATT.CustomPros = { Ergonomics = "+2" }
 
 ATT.Category = {"eft_pg_rpd"}
 
+-- EFT ID: 6513f13a8cb24472490ee32f
 ARC9.LoadAttachment(ATT, "eft_rpd_pg")
 
 ///////////////////////////////////////      eft_rpd_mag_100
@@ -238,6 +245,7 @@ ATT.HasMag = true
 ATT.ClipSize = 100
 -- ATT.ChamberSize = 1
 
+-- EFT ID: 6513f0a194c72326990a3868
 ARC9.LoadAttachment(ATT, "eft_rpd_mag_100")
 
 ///////////////////////////////////////      eft_rpd_n
@@ -257,4 +265,5 @@ ATT.CustomPros = { Ergonomics = "+1" }
 
 ATT.Category = {"eft_rpd_conv"}
 
+-- EFT ID: 65268d8ecb944ff1e90ea385
 ARC9.LoadAttachment(ATT, "eft_rpd_n")
