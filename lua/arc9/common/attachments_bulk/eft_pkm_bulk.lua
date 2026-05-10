@@ -14,7 +14,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -11
-ATT.CustomCons = { Ergonomics = "-11" }
 ATT.VisualRecoilMult = 0.93
 ATT.RecoilMult = 0.93
 ATT.Spread = 1.03 * ARC9.MOAToAcc
@@ -49,7 +48,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -8.5
-ATT.CustomCons = { Ergonomics = "-8.5" }
 ATT.VisualRecoilMult = 0.915
 ATT.RecoilMult = 0.915
 ATT.Spread = 0.96 * ARC9.MOAToAcc
@@ -75,7 +73,6 @@ ATT.Icon = Material("entities/eft_pkm_attachments/ze.png", "mips smooth")
 ATT.Description = [[The DTK-1P muzzle brake, designed for installation on PK, PKM, and PKP machine guns. Manufactured by Zenit.]]
 
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 ATT.VisualRecoilMult = 0.95
 ATT.RecoilMult = 0.95
 ATT.HeatCapacityMult = 1.013
@@ -98,7 +95,6 @@ ATT.Icon = Material("entities/eft_pkm_attachments/fh.png", "mips smooth")
 ATT.Description = [[A standard-issue flash hider for Kalashnikov Machine gun. Manufactured by V.A. Degtyarev Plant.]]
 
 ATT.EFTErgoAdd = -1.5
-ATT.CustomCons = { Ergonomics = "-1.5" }
 ATT.VisualRecoilMult = 0.99
 ATT.RecoilMult = 0.99
 
@@ -120,7 +116,6 @@ ATT.Icon = Material("entities/eft_pkm_attachments/mb.png", "mips smooth")
 ATT.Description = [[A standard-issue muzzle brake-compensator for Kalashnikov Machine gun. Manufactured by V.A. Degtyarev Plant.]]
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.VisualRecoilMult = 0.97
 ATT.RecoilMult = 0.97
 ATT.HeatCapacityMult = 1.01
@@ -151,7 +146,6 @@ ATT.ChamberSize = 1
 ATT.ClipSize = 100
 
 ATT.EFTErgoAdd = -30
-ATT.CustomCons = { Ergonomics = "-30" }
 ATT.MalfunctionMeanShotsToFailMult = 0.99
 
 ATT.Category = {"eft_mag_pkm"}
@@ -173,7 +167,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 
 ATT.Bipod = true 
 ATT.RecoilMultBipod = 0.33
@@ -202,7 +195,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 ATT.HeatCapacityMult = 0.97
 ATT.HeatDissipationMult = 0.975
 
@@ -256,7 +248,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.Category = {"eft_b50_mount"}
 
@@ -315,7 +306,6 @@ ATT.Description = [[A standard-issue pistol grip for Kalashnikov Machine gun. Ma
 ATT.HasGrip = true
 
 ATT.EFTErgoAdd = 6
-ATT.CustomPros = { Ergonomics = "+6" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -337,7 +327,6 @@ ATT.Description = [[A standard-issue black pistol grip for Kalashnikov Machine g
 ATT.HasGrip = true
 
 ATT.EFTErgoAdd = 7
-ATT.CustomPros = { Ergonomics = "+7" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -377,7 +366,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = 3
-ATT.CustomPros = { Ergonomics = "+3" }
 ATT.VisualRecoilMult = 0.72
 ATT.RecoilMult = 0.72
 
@@ -399,7 +387,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = 4.5
-ATT.CustomPros = { Ergonomics = "+4.5" }
 ATT.VisualRecoilMult = 0.71
 ATT.RecoilMult = 0.71
 
@@ -421,7 +408,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = 3
-ATT.CustomPros = { Ergonomics = "+3" }
 ATT.VisualRecoilMult = 0.7
 ATT.RecoilMult = 0.7
 

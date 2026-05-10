@@ -13,7 +13,6 @@ ATT.Description = [[A standard-issue 520mm barrel for the RPD machine gun. Manuf
 ATT.HasBarrel = true 
 
 ATT.EFTErgoAdd = -11
-ATT.CustomCons = { Ergonomics = "-11" }
 ATT.RecoilMult = 0.96
 ATT.VisualRecoilMult = 0.96
 ATT.SpreadOverride = 1.31 * ARC9.MOAToAcc
@@ -86,7 +85,6 @@ ATT.Icon = Material("entities/eft_rpd_attachments/mz.png", "mips smooth")
 ATT.Description = [[A standard-issue barrel thread protector for the RPD machine gun. Manufactured by V.A. Degtyarev Plant.]]
 
 ATT.EFTErgoAdd = 2
-ATT.CustomPros = { Ergonomics = "+2" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -110,7 +108,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 
 ATT.Bipod = true 
 ATT.RecoilMultBipod = 0.33
@@ -157,7 +154,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 
 ATT.Category = {"eft_rpd_handguard"}
 
@@ -177,7 +173,6 @@ ATT.Description = [[A standard-issue wooden stock for the RPD machine gun. Manuf
 ATT.HasStock = true 
 
 ATT.EFTErgoAdd = 16
-ATT.CustomPros = { Ergonomics = "+16" }
 ATT.RecoilMult = 0.78
 ATT.VisualRecoilMult = 0.78
 
@@ -212,7 +207,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = 2
-ATT.CustomPros = { Ergonomics = "+2" }
 
 ATT.Category = {"eft_pg_rpd"}
 
@@ -229,7 +223,6 @@ ATT.Icon = Material("entities/eft_rpd_attachments/mag.png", "mips smooth")
 ATT.Description = [[A standard-issue 100-round box for the RPD machine gun nicknamed "Buben" for its round shape. Manufactured by V.A. Degtyarev Plant.]]
 
 ATT.EFTErgoAdd = -25
-ATT.CustomPros = { Ergonomics = "-25" }
 ATT.MalfunctionMeanShotsToFailMult = 0.99
 
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_rpd_promag_opfor.mdl"
@@ -261,7 +254,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = 1
-ATT.CustomPros = { Ergonomics = "+1" }
 
 ATT.Category = {"eft_rpd_conv"}
 

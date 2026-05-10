@@ -11,7 +11,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e4_762x51_458mm_barrel.png"
 ATT.Description = "A 458mm short barrel for the M60E4 light machine gun. Manufactured by U.S Ordnance."
 
 ATT.EFTErgoAdd = -10
-ATT.CustomCons = { Ergonomics = "-10" }
 ATT.RecoilMult = 0.93
 ATT.VisualRecoilMult = 0.93
 ATT.HeatCapacityMult = 0.88
@@ -55,7 +54,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e4_762x51_475mm_heavy_barre
 ATT.Description = "A heavy fluted 475mm barrel for the M60E4 light machine gun. Manufactured by U.S Ordnance."
 
 ATT.EFTErgoAdd = -13
-ATT.CustomCons = { Ergonomics = "-13" }
 ATT.RecoilMult = 0.9
 ATT.VisualRecoilMult = 0.9
 ATT.HeatCapacityMult = 0.811
@@ -99,7 +97,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e6_762x51_458mm_barrel.png"
 ATT.Description = "A 458mm short barrel for the M60E6 light machine gun. Manufactured by U.S Ordnance."
 
 ATT.EFTErgoAdd = -9
-ATT.CustomCons = { Ergonomics = "-9" }
 ATT.RecoilMult = 0.93
 ATT.VisualRecoilMult = 0.93
 ATT.HeatCapacityMult = 0.871
@@ -143,7 +140,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e3_762x51_584mm_barrel.png"
 ATT.Description = "A long 584mm barrel for the M60E3 light machine gun. Manufactured by U.S Ordnance."
 
 ATT.EFTErgoAdd = -16
-ATT.CustomCons = { Ergonomics = "-16" }
 ATT.RecoilMult = 0.87
 ATT.VisualRecoilMult = 0.87
 ATT.HeatCapacityMult = 0.828
@@ -187,7 +183,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e4_mod_1_handguard.png", "m
 ATT.Description = "An aluminium railed handguard for the M60E4 Mod 1 light machine gun. Manufactured by U.S Ordnance."
 
 ATT.EFTErgoAdd = 7
-ATT.CustomPros = { Ergonomics = "+7" }
 ATT.RecoilMult = 0.98
 ATT.VisualRecoilMult = 0.98
 ATT.HeatCapacityMult = 0.965
@@ -236,7 +231,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e4_mod_1_handguard_fde.png"
 ATT.Description = "An aluminium railed handguard for the M60E4 Mod 1 light machine gun. Manufactured by U.S Ordnance. Flat Dark Earth version."
 
 ATT.EFTErgoAdd = 7
-ATT.CustomPros = { Ergonomics = "+7" }
 ATT.RecoilMult = 0.98
 ATT.VisualRecoilMult = 0.98
 ATT.HeatCapacityMult = 0.965
@@ -285,7 +279,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e6_handguard.png", "mips sm
 ATT.Description = "A standard-issue railed handguard for the M60E6 light machine gun. Manufactured by U.S Ordnance."
 
 ATT.EFTErgoAdd = 8
-ATT.CustomPros = { Ergonomics = "+8" }
 ATT.RecoilMult = 0.97
 ATT.VisualRecoilMult = 0.97
 ATT.HeatCapacityMult = 0.969
@@ -337,7 +330,6 @@ ATT.Description = "A lightweight buttstock for the M60E4 light machine gun with 
 ATT.HasStock = true 
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -359,7 +351,6 @@ ATT.Description = "A lightweight buttstock for the M60E6 light machine gun with 
 ATT.HasStock = true 
 
 ATT.EFTErgoAdd = 6
-ATT.CustomPros = { Ergonomics = "+6" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -381,7 +372,6 @@ ATT.Description = "A lightweight buttstock for the M60E6 light machine gun with 
 ATT.HasStock = true 
 
 ATT.EFTErgoAdd = 6
-ATT.CustomPros = { Ergonomics = "+6" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -438,7 +428,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e6_front_sight_rail.png", "
 ATT.Description = "A small front sight rail for the M60E6 light machine gun. Manufactured by U.S Ordnance."
 
 ATT.EFTErgoAdd = 2
-ATT.CustomPros = { Ergonomics = "+2" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
@@ -464,7 +453,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 
 ATT.Bipod = true 
 ATT.RecoilMultBipod = 0.33
@@ -489,7 +477,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e4_trigger_group.png", "mip
 ATT.Description = "A trigger group for the M60E4 machine gun with an adapter that allows the installation of pistol grips from the M60. Manufactured by U.S. Ordnance."
 
 ATT.EFTErgoAdd = 2
-ATT.CustomPros = { Ergonomics = "+2" }
 
 ATT.HasTrigger = true 
 
@@ -520,7 +507,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e6_trigger_group.png", "mip
 ATT.Description = "A trigger group for the M60E6 machine gun with an adapter that allows the installation of pistol grips from the M60. Manufactured by U.S. Ordnance."
 
 ATT.EFTErgoAdd = 3
-ATT.CustomPros = { Ergonomics = "+3" }
 
 ATT.HasTrigger = true 
 
@@ -551,7 +537,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e6_trigger_group_fde.png", 
 ATT.Description = "A trigger group for the M60E6 machine gun with an adapter that allows the installation of pistol grips from the M60. Manufactured by U.S. Ordnance. Flat Dark Earth version."
 
 ATT.EFTErgoAdd = 3
-ATT.CustomPros = { Ergonomics = "+3" }
 
 ATT.HasTrigger = true 
 
@@ -582,7 +567,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e4_pistol_grip.png", "mips 
 ATT.Description = "A standard-issue pistol grip for the M60E4 light machine gun. Manufactured by U.S Ordnance."
 
 ATT.EFTErgoAdd = 3
-ATT.CustomPros = { Ergonomics = "+3" }
 
 ATT.HasGrip = true 
 
@@ -604,7 +588,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e6_pistol_grip.png", "mips 
 ATT.Description = "A standard-issue lightweight pistol grip for the M60E6 light machine gun. Manufactured by U.S Ordnance."
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 
 ATT.HasGrip = true 
 
@@ -626,7 +609,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e6_pistol_grip_fde.png", "m
 ATT.Description = "A standard-issue lightweight pistol grip for the M60E6 light machine gun. Manufactured by U.S Ordnance. Flat Dark Earth version."
 
 ATT.EFTErgoAdd = 5
-ATT.CustomPros = { Ergonomics = "+5" }
 
 ATT.HasGrip = true 
 
@@ -649,7 +631,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60_762x51_capco_100round_assa
 ATT.Description = "A 100-round 7.62x51 hard plastic ammo box for the M60 machine gun. Manufactured by Capco."
 
 ATT.EFTErgoAdd = -20
-ATT.CustomCons = { Ergonomics = "-20" }
 ATT.MalfunctionMeanShotsToFailMult = 0.99
 
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_m60_dropped.mdl"
@@ -679,7 +660,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e3_762x51_flash_hider.png",
 ATT.Description = "A standard-issue flash hider for the M60E3 light machine gun. Manufactured by U.S Ordnance."
 
 ATT.EFTErgoAdd = -1
-ATT.CustomCons = { Ergonomics = "-1" }
 ATT.RecoilMult = 0.94
 ATT.VisualRecoilMult = 0.94
 ATT.SpreadMult = 0.96
@@ -709,7 +689,6 @@ ATT.Icon = Material("entities/eft_m60_attachments/m60e6_762x51_flash_hider.png",
 ATT.Description = "A standard-issue flash hider for the M60E6 light machine gun. Manufactured by U.S Ordnance."
 
 ATT.EFTErgoAdd = -2
-ATT.CustomCons = { Ergonomics = "-2" }
 ATT.RecoilMult = 0.93
 ATT.VisualRecoilMult = 0.93
 ATT.SpreadMult = 0.95
