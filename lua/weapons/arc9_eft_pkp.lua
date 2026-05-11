@@ -16,7 +16,7 @@ SWEP.StandardPresets = {
     "[Zenit]XQAAAQDOAQAAAAAAAAA9iIIiM7tuo1AtT00OeFDtNRc/1CeetbH4SPweQa6gp9wGiubYO/mpItfoT3va4CIVDABejJFzMYP3s1TbweoNXwGOFK4M/cwzZOxOusVpcycYnFs9oj2+AIOUCpGsSy36gEtGEdkEoKNwNiOR+7aaX6aW5cPkG+tU5UcZKzGgbDWkTc7ED6nQOcNsL+A416roDojYFUQfXX92XX4/4lrvUFnVRONDP7YJ+OYk5zF0XsQzU6IJfUEt/1LVtMQ1a+7HzYkH8KxA3wUA"
 }
 
-SWEP.MalfunctionMeanShotsToFail = 1100
+SWEP.MalfunctionMeanShotsToFail = 1100 * 1.5
 
 SWEP.DefaultElements = {"pkplol"} -- side mount
 
