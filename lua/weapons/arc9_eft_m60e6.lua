@@ -12,6 +12,7 @@ SWEP.Description = ARC9:GetPhrase("eft_weapon_m60e6_desc")
 -- SWEP.DefaultBodygroups = "10000000000000"
 
 SWEP.EFTErgo = 31
+SWEP.EFTWeight = 5.378
 
 SWEP.DefaultElements = {"eft_e6"} -- owo
 

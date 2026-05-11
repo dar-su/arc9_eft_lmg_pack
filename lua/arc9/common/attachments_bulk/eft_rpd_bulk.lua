@@ -12,9 +12,6 @@ ATT.Description = [[A standard-issue 520mm barrel for the RPD machine gun. Manuf
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -11
-ATT.RecoilMult = 0.96
-ATT.VisualRecoilMult = 0.96
 ATT.SpreadOverride = 1.31 * ARC9.MOAToAcc
 
 ATT.SortOrder = 0
@@ -38,6 +35,13 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -32,
+    recoilModifier = -9.4,
+    weight = 1.8,
+}))
+
+
 -- EFT ID: 6513eff1e06849f06c0957d4
 ARC9.LoadAttachment(ATT, "eft_rpd_barrel_520")
 
@@ -52,9 +56,6 @@ ATT.Description = [[A 350mm barrel shortened by an unknown artisan for the RPD m
 
 ATT.HasBarrel = true 
 
-ATT.EFTErgoAdd = -3
-ATT.RecoilMult = 0.98
-ATT.VisualRecoilMult = 0.98
 ATT.SpreadOverride = 2.13 * ARC9.MOAToAcc
 
 ATT.SortOrder = 0
@@ -72,6 +73,14 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -14,
+    recoilModifier = -6.3,
+    weight = 1.1,
+    velocity = -8,
+}))
+
+
 -- EFT ID: 65266fd43341ed9aa903dd56
 ARC9.LoadAttachment(ATT, "eft_rpd_barrel_350")
 
@@ -84,12 +93,16 @@ ATT.CompactName = "RPD thr."
 ATT.Icon = Material("entities/eft_rpd_attachments/mz.png", "mips smooth")
 ATT.Description = [[A standard-issue barrel thread protector for the RPD machine gun. Manufactured by V.A. Degtyarev Plant.]]
 
-ATT.EFTErgoAdd = 2
-
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_muzzle_rpd"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 2,
+    weight = 0.01,
+}))
+
 
 -- EFT ID: 6513f0f5e63f29908d0ffab8
 ARC9.LoadAttachment(ATT, "eft_rpd_muzzle")
@@ -107,8 +120,6 @@ A bit improvised version of EFT bipods, does not need manual unfolding.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -2
-
 ATT.Bipod = true 
 ATT.RecoilMultBipod = 0.33
 ATT.VisualRecoilMultBipod = 0.33
@@ -117,6 +128,12 @@ ATT.HoldBreathTimeMultBipod = 30
 ATT.SwayMultBipod = 0.1
 
 ATT.Category = {"eft_bipod_rpd"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -8,
+    weight = 0.455,
+}))
+
 
 -- EFT ID: 6513f037e06849f06c0957d7
 ARC9.LoadAttachment(ATT, "eft_rpd_bipod")
@@ -136,6 +153,11 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_rpd_rs"}
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.025,
+}))
+
+
 -- EFT ID: 6513f153e63f29908d0ffaba
 ARC9.LoadAttachment(ATT, "eft_rpd_rearsight")
 
@@ -153,9 +175,13 @@ ATT.HasHG = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = 5
-
 ATT.Category = {"eft_rpd_handguard"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.25,
+}))
+
 
 -- EFT ID: 6513f05a94c72326990a3866
 ARC9.LoadAttachment(ATT, "eft_rpd_hg")
@@ -172,10 +198,6 @@ ATT.Description = [[A standard-issue wooden stock for the RPD machine gun. Manuf
 
 ATT.HasStock = true 
 
-ATT.EFTErgoAdd = 16
-ATT.RecoilMult = 0.78
-ATT.VisualRecoilMult = 0.78
-
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
@@ -189,6 +211,13 @@ ATT.Attachments = {
         Ang = Angle(0, -90, 0),
     },
 }
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 16,
+    recoilModifier = -22,
+    weight = 1.12,
+}))
+
+
 -- EFT ID: 6513f1798cb24472490ee331
 ARC9.LoadAttachment(ATT, "eft_rpd_stock")
 
@@ -205,10 +234,13 @@ ATT.HasGrip = true
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-
-ATT.EFTErgoAdd = 2
-
 ATT.Category = {"eft_pg_rpd"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 2,
+    weight = 0.06,
+}))
+
 
 -- EFT ID: 6513f13a8cb24472490ee32f
 ARC9.LoadAttachment(ATT, "eft_rpd_pg")
@@ -222,9 +254,6 @@ ATT.CompactName = "Buben"
 ATT.Icon = Material("entities/eft_rpd_attachments/mag.png", "mips smooth")
 ATT.Description = [[A standard-issue 100-round box for the RPD machine gun nicknamed "Buben" for its round shape. Manufactured by V.A. Degtyarev Plant.]]
 
-ATT.EFTErgoAdd = -25
-ATT.MalfunctionMeanShotsToFailMult = 0.99
-
 ATT.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/mag_rpd_promag_opfor.mdl"
 ATT.DropMagazineAmount = 1
 
@@ -237,6 +266,13 @@ ATT.HasMag = true
 
 ATT.ClipSize = 100
 -- ATT.ChamberSize = 1
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -6,
+    weight = 0.8,
+    malfunctionChance = 0.01,
+}))
+
 
 -- EFT ID: 6513f0a194c72326990a3868
 ARC9.LoadAttachment(ATT, "eft_rpd_mag_100")
@@ -257,5 +293,9 @@ ATT.EFTErgoAdd = 1
 
 ATT.Category = {"eft_rpd_conv"}
 
--- EFT ID: 65268d8ecb944ff1e90ea385
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.1,
+}))
+
+-- EFT ID: NO
 ARC9.LoadAttachment(ATT, "eft_rpd_n")

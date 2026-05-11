@@ -13,9 +13,6 @@ ATT.HasBarrel = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -11
-ATT.VisualRecoilMult = 0.93
-ATT.RecoilMult = 0.93
 ATT.Spread = 1.03 * ARC9.MOAToAcc
 ATT.HeatCapacityMult = 1.14
 ATT.HeatDissipationMult = 1.09
@@ -30,6 +27,14 @@ ATT.Attachments = {
         Ang = Angle(0, -90, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -33,
+    recoilModifier = -16.5,
+    weight = 2.4,
+    velocity = 11,
+}))
+
 
 -- EFT ID: 646371faf2404ab67905c8e9
 ARC9.LoadAttachment(ATT, "eft_barrel_pkm")
@@ -47,9 +52,6 @@ ATT.HasBarrel = true
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -8.5
-ATT.VisualRecoilMult = 0.915
-ATT.RecoilMult = 0.915
 ATT.Spread = 0.96 * ARC9.MOAToAcc
 ATT.HeatCapacityMult = 1.22
 ATT.HeatDissipationMult = 1.12
@@ -58,6 +60,14 @@ ATT.Model = "models/weapons/arc9/darsu_eft/mods/pkp_barrel_lhik.mdl"
 ATT.LHIK = true
 
 ATT.Category = {"eft_pk_barrel"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -30,
+    recoilModifier = -16.5,
+    weight = 3.2,
+    velocity = 11,
+}))
+
 
 -- EFT ID: 64639a9aab86f8fd4300146c
 ARC9.LoadAttachment(ATT, "eft_barrel_pkp")
@@ -72,15 +82,20 @@ ATT.CompactName = "DTK-1P"
 ATT.Icon = Material("entities/eft_pkm_attachments/ze.png", "mips smooth")
 ATT.Description = [[The DTK-1P muzzle brake, designed for installation on PK, PKM, and PKP machine guns. Manufactured by Zenit.]]
 
-ATT.EFTErgoAdd = -2
-ATT.VisualRecoilMult = 0.95
-ATT.RecoilMult = 0.95
 ATT.HeatCapacityMult = 1.013
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pkm_muzzle"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -4,
+    recoilModifier = -15,
+    accuracyModifier = 1,
+    weight = 0.124,
+}))
+
 
 -- EFT ID: 6492ef63cfcf7c89e701abf1
 ARC9.LoadAttachment(ATT, "eft_muzzle_pkm_dtk1p")
@@ -94,14 +109,17 @@ ATT.CompactName = "PKM"
 ATT.Icon = Material("entities/eft_pkm_attachments/fh.png", "mips smooth")
 ATT.Description = [[A standard-issue flash hider for Kalashnikov Machine gun. Manufactured by V.A. Degtyarev Plant.]]
 
-ATT.EFTErgoAdd = -1.5
-ATT.VisualRecoilMult = 0.99
-ATT.RecoilMult = 0.99
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pkm_muzzle"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    recoilModifier = -5,
+    weight = 0.057,
+}))
+
 
 -- EFT ID: 6492efb8cfcf7c89e701abf3
 ARC9.LoadAttachment(ATT, "eft_muzzle_pkm_fh")
@@ -115,16 +133,20 @@ ATT.CompactName = "PKM"
 ATT.Icon = Material("entities/eft_pkm_attachments/mb.png", "mips smooth")
 ATT.Description = [[A standard-issue muzzle brake-compensator for Kalashnikov Machine gun. Manufactured by V.A. Degtyarev Plant.]]
 
-ATT.EFTErgoAdd = -1
-ATT.VisualRecoilMult = 0.97
-ATT.RecoilMult = 0.97
 ATT.HeatCapacityMult = 1.01
-ATT.SpreadMult = 0.99
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pkm_muzzle"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2,
+    recoilModifier = -8,
+    accuracyModifier = 1,
+    weight = 0.063,
+}))
+
 
 -- EFT ID: 6492efe46cc7e29a6f03b2a0
 ARC9.LoadAttachment(ATT, "eft_muzzle_pkm_mb")
@@ -145,10 +167,15 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.ChamberSize = 1
 ATT.ClipSize = 100
 
-ATT.EFTErgoAdd = -30
-ATT.MalfunctionMeanShotsToFailMult = 0.99
 
 ATT.Category = {"eft_mag_pkm"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -7,
+    weight = 1.5,
+    malfunctionChance = 0.01,
+}))
+
 
 -- EFT ID: 646372518610c40fc20204e8
 ARC9.LoadAttachment(ATT, "eft_pkm_mag_100")
@@ -166,7 +193,6 @@ A bit improvised version of EFT bipods, does not need manual unfolding.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -2
 
 ATT.Bipod = true 
 ATT.RecoilMultBipod = 0.33
@@ -177,6 +203,12 @@ ATT.SwayMultBipod = 0.1
 
 
 ATT.Category = {"eft_bipod_pkm"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -8,
+    weight = 0.47,
+}))
+
 
 -- EFT ID: 6464d870bb2c580352070cc4
 ARC9.LoadAttachment(ATT, "eft_pkm_bipod")
@@ -194,7 +226,6 @@ ATT.Description = [[The B-50 integrally-machined handguard made of D16T alloy fo
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = 5
 ATT.HeatCapacityMult = 0.97
 ATT.HeatDissipationMult = 0.975
 
@@ -232,6 +263,12 @@ ATT.Attachments = {
     },
 }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 10,
+    weight = 0.36,
+}))
+
+
 -- EFT ID: 6491c6f6ef312a876705191b
 ARC9.LoadAttachment(ATT, "eft_hg_pk_zenit")
 
@@ -247,7 +284,6 @@ ATT.Description = [[The B-50 66mm mount for Kalashnikov Machine gun. Features a 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = -1
 
 ATT.Category = {"eft_b50_mount"}
 
@@ -260,6 +296,12 @@ ATT.Attachments = {
         ExtraSightDistance = 8,
     },
 }
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -1,
+    weight = 0.135,
+}))
 
 
 -- EFT ID: 6492c8bba6e68e06fb0bae87
@@ -291,6 +333,11 @@ ATT.Attachments = {
 
 ATT.ExcludeElements = {"eft_barrel_pkp" }
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.125,
+}))
+
+
 -- EFT ID: 6492c6dd60fdb10a020621a2
 ARC9.LoadAttachment(ATT, "eft_mount_b50_16")
 
@@ -305,12 +352,17 @@ ATT.Description = [[A standard-issue pistol grip for Kalashnikov Machine gun. Ma
 
 ATT.HasGrip = true
 
-ATT.EFTErgoAdd = 6
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pk_pg"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    weight = 0.09,
+}))
+
 
 -- EFT ID: 646371779f5f0ea59a04c204
 ARC9.LoadAttachment(ATT, "eft_pg_pk")
@@ -326,12 +378,17 @@ ATT.Description = [[A standard-issue black pistol grip for Kalashnikov Machine g
 
 ATT.HasGrip = true
 
-ATT.EFTErgoAdd = 7
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pk_pg"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    weight = 0.09,
+}))
+
 
 -- EFT ID: 64cbad529f7cf7f75c077fd5
 ARC9.LoadAttachment(ATT, "eft_pg_pkb")
@@ -350,6 +407,11 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Category = {"eft_pk_rs"}
 
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 0.025,
+}))
+
+
 -- EFT ID: 6492fb8253acae0af00a29b6
 ARC9.LoadAttachment(ATT, "eft_rs_pk")
 
@@ -365,11 +427,15 @@ ATT.Description = [[A standard-issue wooden stock for Kalashnikov Machine gun. M
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = 3
-ATT.VisualRecoilMult = 0.72
-ATT.RecoilMult = 0.72
 
 ATT.Category = {"eft_pk_stock"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 3,
+    recoilModifier = -20,
+    weight = 0.6,
+}))
+
 
 -- EFT ID: 646371a9f2404ab67905c8e6
 ARC9.LoadAttachment(ATT, "eft_stock_pkm_wood")
@@ -386,11 +452,15 @@ ATT.Description = [[A standard-issue stock for PKP "Pecheneg" machine gun. Manuf
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = 4.5
-ATT.VisualRecoilMult = 0.71
-ATT.RecoilMult = 0.71
 
 ATT.Category = {"eft_pk_stock"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 4.5,
+    recoilModifier = -20,
+    weight = 0.5,
+}))
+
 
 -- EFT ID: 6492e3a97df7d749100e29ee
 ARC9.LoadAttachment(ATT, "eft_stock_pkm_pl")
@@ -407,9 +477,6 @@ ATT.Description = [[The PT-2 telescopic stock made of aluminum alloy D16T replac
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.EFTErgoAdd = 3
-ATT.VisualRecoilMult = 0.7
-ATT.RecoilMult = 0.7
 
 ATT.Category = {"eft_pk_stock"}
 
@@ -429,6 +496,13 @@ ATT.Attachments = {
         Icon_Offset = Vector(0, -9, 0),
     },
 }
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -3,
+    recoilModifier = -21,
+    weight = 0.643,
+}))
+
 
 -- EFT ID: 6492d7847363b8a52206bc52
 ARC9.LoadAttachment(ATT, "eft_stock_pkm_zenit")
