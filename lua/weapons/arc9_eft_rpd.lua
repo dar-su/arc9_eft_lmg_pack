@@ -504,11 +504,7 @@ local beltt = {path4 .. "pk_belt_1.wav",path4 .. "pk_belt_2.wav",path4 .. "pk_be
 local alwayslhik = {
     { t = 0, lhik = 1 },
     { t = 1, lhik = 1 },
-} 
-local neverlhik = {
-    { t = 0, lhik = 0 },
-    { t = 1, lhik = 0 },
-}  
+}
 
 local bipodpath = "weapons/darsu_eft/bipod/"
 
@@ -602,7 +598,6 @@ SWEP.Animations = {
         MinProgress = 0.93,
         MagSwapTime = 5,
         FireASAP = true,
-        IKTimeLine = alwayslhik,
         EventTable = {
             { s = randspin, t = 0.05 },
             { s = path .. "rpd_dust_open.ogg", t = 0.55 },
@@ -618,13 +613,19 @@ SWEP.Animations = {
             { s = path .. "rpd_dust_close2.ogg", t = 7.54 },
             { s = randspin, t = 8.45 },
         },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.06, lhik = 0 },
+            { t = 0.86, lhik = 0 },
+            { t = 0.97, lhik = 1 },
+            { t = 1, lhik = 1 },
+        },
     },
     ["reload0_tactical"] = {
         Source = "reloadt",
         MinProgress = 0.93,
         MagSwapTime = 5,
         FireASAP = true,
-        IKTimeLine = alwayslhik,
         DropMagAt = 4.25 - 1.8 - 4/25,
         EventTable = {
             { s = randspin, t = 0 },
@@ -642,13 +643,19 @@ SWEP.Animations = {
             {hide = 1, t = 4.25 - 1.8 - 4/25},
             {hide = 0, t = 4.8 - 1.8 - 4/25}
         },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.06, lhik = 0 },
+            { t = 0.85, lhik = 0 },
+            { t = 0.96, lhik = 1 },
+            { t = 1, lhik = 1 },
+        },
     },
     ["reload0_n"] = {
         Source = "reload_n",
         MinProgress = 0.97,
         MagSwapTime = 5.2,
         FireASAP = true,
-        IKTimeLine = alwayslhik,
         EventTable = {
             { s = path .. "pk_gun_flip_5.ogg", t = 0.22 },
             { s = path .. "rpd_sight_button_in.ogg", t = 0.68 },
@@ -675,13 +682,19 @@ SWEP.Animations = {
             { s = path .. "rpd_sight_button_out.ogg", t = 10.05 },
             { s = randspin, t = 10.57 },
         },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.04, lhik = 0 },
+            { t = 0.90, lhik = 0 },
+            { t = 0.99, lhik = 1 },
+            { t = 1, lhik = 1 },
+        },
     },
     ["reload0_n_tactical"] = {
         Source = "reload_nt",
         MinProgress = 0.97,
         MagSwapTime = 5.2,
         FireASAP = true,
-        IKTimeLine = alwayslhik,
         DropMagAt = 5.35 - 1.8 - 4/25,
         EventTable = {
             { s = path .. "rpd_sight_button_in.ogg", t = 2.44- 1.8 - 4/25 },
@@ -708,6 +721,13 @@ SWEP.Animations = {
             {hide = 1, t = 5.35 - 1.8 - 4/25},
             {hide = 0, t = 5.7 - 1.8 - 4/25}
         },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.04, lhik = 0 },
+            { t = 0.88, lhik = 0 },
+            { t = 0.97, lhik = 1 },
+            { t = 1, lhik = 1 },
+        },
     },
     
 
@@ -717,7 +737,6 @@ SWEP.Animations = {
         MagSwapTime = 4.8,
         DropMagAt = 4.25,
         FireASAP = true,
-        IKTimeLine = alwayslhik,
         EventTable = {
             { s = randspin, t = 0 },
             { s = path .. "rpd_charge_out.ogg", t = 0.38 },
@@ -737,6 +756,14 @@ SWEP.Animations = {
             {hide = 1, t = 4.25},
             {hide = 0, t = 4.8}
         },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.18, lhik = 1 },
+            { t = 0.24, lhik = 0 },
+            { t = 0.88, lhik = 0 },
+            { t = 0.96, lhik = 1 },
+            { t = 1, lhik = 1 },
+        },
     },
     ["reload_empty0_n"] = {
         Source = "reload_empty_n", 
@@ -744,7 +771,6 @@ SWEP.Animations = {
         MagSwapTime = 5.7,
         DropMagAt = 5.35,
         FireASAP = true,
-        IKTimeLine = alwayslhik,
         EventTable = {
             { s = path .. "rpd_charge_out.ogg", t = 0.38 },
             { s = path .. "rpd_charge_in.ogg", t = 0.87 },
@@ -773,6 +799,14 @@ SWEP.Animations = {
             {hide = 0, t = 0},
             {hide = 1, t = 5.35},
             {hide = 0, t = 5.7}
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.16, lhik = 1 },
+            { t = 0.2, lhik = 0 },
+            { t = 0.90, lhik = 0 },
+            { t = 0.97, lhik = 1 },
+            { t = 1, lhik = 1 },
         },
     },
 
@@ -827,7 +861,6 @@ SWEP.Animations = {
 
     ["inspect_mag_0"] = {
         Source = "magcheck",
-        IKTimeLine = alwayslhik,
         EventTable = {
             { s = randspin, t = 0.05 },
             { s =  path .. "rpd_mag_check1.ogg", t = 0.73 },
@@ -835,16 +868,29 @@ SWEP.Animations = {
             { s =  path4 .. "pk_belt_5.wav", t = 1.18 },
             { s =  path .. "pk_gun_flip_5.ogg", t = 2.04 },
         },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.1, lhik = 0 },
+            { t = 0.67, lhik = 0 },
+            { t = 0.8, lhik = 1 },
+            { t = 1, lhik = 1 },
+        },
     },
     ["inspect_mag_0_empty"] = {
         Source = "magcheck_empty",
-        IKTimeLine = alwayslhik,
         EventTable = {
             { s = randspin, t = 0.05 },
             { s =  path .. "rpd_mag_check1.ogg", t = 0.73 },
             { s =  path .. "rpd_mag_check2.ogg", t = 1.72 },
             { s =  path4 .. "pk_belt_5.wav", t = 1.18 },
             { s =  path .. "pk_gun_flip_5.ogg", t = 2.04 },
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.1, lhik = 0 },
+            { t = 0.67, lhik = 0 },
+            { t = 0.8, lhik = 1 },
+            { t = 1, lhik = 1 },
         },
     },
 
@@ -872,7 +918,6 @@ SWEP.Animations = {
     },
     ["inspect0_n"] = {
         Source = "check_chamber_n",
-        IKTimeLine = alwayslhik,
         EventTable = {
             { s = path .. "pk_gun_flip_5.ogg", t = 0.1 },
             { s = path .. "rpd_sight_button_in.ogg", t = 0.38 },
@@ -890,10 +935,22 @@ SWEP.Animations = {
             { s = path .. "rpd_sight_button_out.ogg", t = 5.18 },
             { s = randspin, t = 5.5 },
         },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.06, lhik = 0 },
+            { t = 0.15, lhik = 0 },
+            { t = 0.22, lhik = 1 },
+
+            { t = 0.68, lhik = 1 },
+            { t = 0.78, lhik = 0 },
+            { t = 0.9, lhik = 0 },
+            { t = 0.9, lhik = 0 },
+            { t = 0.96, lhik = 1 },
+            { t = 1, lhik = 1 },
+        },
     },
     ["inspect0_n_empty"] = {
         Source = "check_chamber_empty_n",
-        IKTimeLine = alwayslhik,
         EventTable = {
             { s = path .. "pk_gun_flip_5.ogg", t = 0.1 },
             { s = path .. "rpd_sight_button_in.ogg", t = 0.38 },
@@ -910,6 +967,19 @@ SWEP.Animations = {
             { s = path .. "rpd_sight_button_in.ogg", t = 4.97 },
             { s = path .. "rpd_sight_button_out.ogg", t = 5.18 },
             { s = randspin, t = 5.5 },
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.06, lhik = 0 },
+            { t = 0.15, lhik = 0 },
+            { t = 0.22, lhik = 1 },
+
+            { t = 0.68, lhik = 1 },
+            { t = 0.78, lhik = 0 },
+            { t = 0.9, lhik = 0 },
+            { t = 0.9, lhik = 0 },
+            { t = 0.96, lhik = 1 },
+            { t = 1, lhik = 1 },
         },
     },
     
@@ -918,26 +988,46 @@ SWEP.Animations = {
         EventTable = {
             { s = { bipodpath .. "bipod_rpd_unfold_1.ogg", bipodpath .. "bipod_rpd_unfold_2.ogg", bipodpath .. "bipod_rpd_unfold_3.ogg" }, t = 0.0 },
             { s = { bipodpath .. "bipod_stand_on_1.ogg", bipodpath .. "bipod_stand_on_2.ogg", bipodpath .. "bipod_stand_on_3.ogg", bipodpath .. "bipod_stand_on_4.ogg", bipodpath .. "bipod_stand_on_5.ogg" }, t = 0.2 },
-        }
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.5, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
     ["enter_bipod_empty"] = {
         Source = "action_empty",
         EventTable = {
             { s = { bipodpath .. "bipod_rpd_unfold_1.ogg", bipodpath .. "bipod_rpd_unfold_2.ogg", bipodpath .. "bipod_rpd_unfold_3.ogg" }, t = 0.0 },
             { s = { bipodpath .. "bipod_stand_on_1.ogg", bipodpath .. "bipod_stand_on_2.ogg", bipodpath .. "bipod_stand_on_3.ogg", bipodpath .. "bipod_stand_on_4.ogg", bipodpath .. "bipod_stand_on_5.ogg" }, t = 0.2 },
-        }
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.5, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
     ["exit_bipod"] = {
         Source = "action",
         EventTable = {
             { s = { bipodpath .. "bipod_rpd_fold_1.ogg", bipodpath .. "bipod_rpd_fold_2.ogg", bipodpath .. "bipod_rpd_fold_3.ogg" }, t = 0.0 },
-        }
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.5, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
     ["exit_bipod_empty"] = {
         Source = "action_empty",
         EventTable = {
             { s = { bipodpath .. "bipod_rpd_fold_1.ogg", bipodpath .. "bipod_rpd_fold_2.ogg", bipodpath .. "bipod_rpd_fold_3.ogg" }, t = 0.0 },
-        }
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.5, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
 }
 
@@ -962,6 +1052,16 @@ SWEP.AttachmentElements = {
     ["eft_rpd_stock"] = { Bodygroups = { {10, 1} } },
 
     ["eft_rpd_pg"] = { Bodygroups = { {8, 1} } },
+
+
+    ["eft_rpd_barrel_370"] = { Bodygroups = { {4, 3} } },
+    ["eft_rpd_hg_ds"] = { Bodygroups = { {6, 2} } },
+    ["eft_rpd_muzzle_ds"] = { Bodygroups = { {7, 3} } }, -- 2
+    ["eft_rpd_stock_ds"] = { Bodygroups = { {10, 2} } }, -- 2
+
+    ["eft_sa58_pgrip_fab"] = { Bodygroups = { {8, 2} } }, -- 2
+    ["eft_sa58_pgrip_std"] = { Bodygroups = { {8, 3} } }, -- 2
+    ["eft_sa58_pgrip_saw"] = { Bodygroups = { {8, 4} } }, -- 2
 }
 
 SWEP.EFTshellsfunnytable = {

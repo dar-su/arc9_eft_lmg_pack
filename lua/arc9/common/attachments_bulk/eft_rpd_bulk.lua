@@ -299,3 +299,156 @@ table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
 
 -- EFT ID: NO
 ARC9.LoadAttachment(ATT, "eft_rpd_n")
+
+
+
+
+
+///////////////////////////////////////      eft_rpd_barrel_370
+
+ATT = {}
+
+ATT.PrintName = "RPD 7.62x39 DS Arms 370mm barrel"
+ATT.CompactName = "RPD 370mm"
+ATT.Icon = Material("entities/eft_attachments/6830601984a12bb973021fc2.png", "mips smooth")
+ATT.Description = "A 370mm barrel for the RPD machine gun, custom threaded for .308/7.62x51 muzzle devices."
+
+ATT.HasBarrel = true 
+
+ATT.SpreadOverride = 1.89 * ARC9.MOAToAcc
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_rpd_barrel"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_muzzle"),
+        Category = {"eft_muzzle_ar10", "eft_muzzle_rpd2"},
+        Pos = Vector(0, 14, 0),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+    },
+}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -16,
+    recoilModifier = -6.7,
+    weight = 1.1,
+    velocity = -7,
+}))
+-- EFT ID: 6830601984a12bb973021fc2
+ARC9.LoadAttachment(ATT, "eft_rpd_barrel_370")
+
+
+///////////////////////////////////////      eft_rpd_muzzle_ds
+
+ATT = {}
+
+ATT.PrintName = "RPD 7.62x51 DS Arms Belgian Style Muzzle Brake"
+ATT.CompactName = "RPD BEL"
+ATT.Icon = Material("entities/eft_attachments/6830606e84a12bb973021fd0.png", "mips smooth")
+ATT.Description = "A Belgian type muzzle brake for the custom threaded .308 barrel for the RPD machine gun. Manufactured by DS Arms."
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_muzzle_rpd2"}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = -2.5,
+    recoilModifier = -12,
+    accuracyModifier = 3,
+    weight = 0.064,
+}))
+-- EFT ID: 6830606e84a12bb973021fd0
+ARC9.LoadAttachment(ATT, "eft_rpd_muzzle_ds")
+
+///////////////////////////////////////      eft_rpd_hg_ds
+
+ATT = {}
+
+ATT.PrintName = "RPD DS Arms Railed Handguard"
+ATT.CompactName = "DSA RPD"
+ATT.Icon = Material("entities/eft_attachments/68305fdc84a12bb973021fc0.png", "mips smooth")
+ATT.Description = "A polymer railed handguard for the RPD machine gun. Manufactured by DS Arms."
+
+ATT.HasHG = true 
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_rpd_handguard"}
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_scope"),
+        Category = {"eft_optic_medium", "eft_optic_small"},
+        Pos = Vector(-0.3, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        ExtraSightDistance = 4,
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_foregrip"),
+        Category = {"eft_foregrip_small"},
+        Pos = Vector(0, 0, 1.38),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, -1),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_tactical_r"),
+        Category = {"eft_tactical", "eft_tactical_top"},
+        Pos = Vector(0, 1.2, -0.7),
+        Ang = Angle(0, 0, 90),
+        Icon_Offset = Vector(0, 0, 0.2),
+    },
+}
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    ergonomicsModifier = 5,
+    weight = 0.25,
+}))
+-- EFT ID: 68305fdc84a12bb973021fc0
+ARC9.LoadAttachment(ATT, "eft_rpd_hg_ds")
+
+
+///////////////////////////////////////      eft_rpd_stock_ds
+
+ATT = {}
+
+ATT.PrintName = "RPD DS Arms buttstock"
+ATT.CompactName = "DSA RPD"
+ATT.Icon = Material("entities/eft_attachments/683060403b1bb49282023611.png", "mips smooth")
+ATT.Description = "A polymer buttstock for the RPD machine gun. Manufactured by DS Arms."
+
+ATT.HasStock = true 
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.Category = {"eft_stock_rpd"}
+
+ATT.Attachments = {
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_pgrip"),
+        Category = "eft_sa58_pgrip",
+        Pos = Vector(0, 0, 3),
+        Ang = Angle(0, -90, 0),
+    },
+    {
+        PrintName = ARC9:GetPhrase("eft_cat_buffertube"),
+        Category = {"eft_ar15_buffertube", "eft_hk416_buffertube", "eft_ar15_buffertube_notbuffer"},
+        Pos = Vector(0.95, 0, 0.55),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(-0.2, 0, 0.5),
+    },
+}
+
+
+table.Merge(ATT, ARC9EFT.GenerateEFTAttachment({
+    weight = 1.12,
+}))
+-- EFT ID: 683060403b1bb49282023611
+ARC9.LoadAttachment(ATT, "eft_rpd_stock_ds")
