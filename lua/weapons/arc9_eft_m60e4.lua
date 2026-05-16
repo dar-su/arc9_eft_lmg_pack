@@ -324,7 +324,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         -- end)
         
         if swep.EFT_StartedTacReload then
-            if SERVER then timer.Simple(0.3, function() if IsValid(swep) then swep:SetClip1(1) end end) end
+            if SERVER then timer.Simple(0.3, function() if IsValid(swep) then swep:SetClip1(0) end end) end
             return "reload_tactical" .. ending
         end
 

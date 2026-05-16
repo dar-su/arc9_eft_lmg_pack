@@ -167,6 +167,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.ChamberSize = 1
 ATT.ClipSize = 100
 
+ATT.DropMagazineSounds = ARC9EFT.MagDropDrumEmpty
+
 
 ATT.Category = {"eft_mag_pkm"}
 
